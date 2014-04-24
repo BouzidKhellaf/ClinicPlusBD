@@ -5,7 +5,52 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2014-04-22T15:28:00Z</updated>
+  <updated>2014-04-24T13:19:08Z</updated>
+  <entry>
+    <title>Spring Boot 1.0.2.RELEASE Available Now</title>
+    <link rel="alternate" href="https://spring.io/blog/2014/04/24/spring-boot-1-0-2-release-available-now" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Dave Syer</name>
+    </author>
+    <id>tag:spring.io,2014-04-24:1538</id>
+    <updated>2014-04-24T13:19:08Z</updated>
+    <content type="html">&lt;p&gt;Spring Boot 1.0.2.RELEASE is available now in the Spring and Maven Central repositories. This is mostly a bug-fix release (nothing major, but please upgrade if you are using an older version). There are also a couple of nice new features.&lt;/p&gt;
+
+&lt;p&gt;My favourite additions are the new &lt;code&gt;@IntegrationTest&lt;/code&gt; features. Here's an example:&lt;/p&gt;
+
+&lt;div class="highlight highlight-java"&gt;&lt;pre&gt;&lt;span class="nd"&gt;@RunWith&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;SpringJUnit4ClassRunner&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;class&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;span class="nd"&gt;@SpringApplicationConfiguration&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;classes&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;SampleActuatorApplication&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;class&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;span class="nd"&gt;@WebAppConfiguration&lt;/span&gt;
+&lt;span class="nd"&gt;@IntegrationTest&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"server.port=0"&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;SampleActuatorApplicationTests&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+
+    &lt;span class="nd"&gt;@Value&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"${local.server.port}"&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+    &lt;span class="kd"&gt;private&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;port&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+
+        &lt;span class="o"&gt;...&lt;/span&gt;
+
+&lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Here we have set the default value of "server.port" to 0 (which means "choose a random port") and then we have bound it to a field in the test so we can use it to interact with the running server. Neat, eh? You can bind other key-value pairs by adding more &lt;code&gt;Strings&lt;/code&gt; to the &lt;code&gt;@IntegrationTest&lt;/code&gt; &lt;code&gt;value&lt;/code&gt; attribute.&lt;/p&gt;
+
+&lt;p&gt;We also added the following:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Websocket support to the Groovy CLI&lt;/li&gt;
+&lt;li&gt;Support for "yaml" file extensions in external configuration&lt;/li&gt;
+&lt;li&gt;A webapp will have a &lt;code&gt;LocaleResolver&lt;/code&gt; if &lt;code&gt;spring.mvc.locale&lt;/code&gt; is set&lt;/li&gt;
+&lt;li&gt;The script separator for SQL initialization has been externalized&lt;/li&gt;
+&lt;li&gt;
+&lt;code&gt;Filter&lt;/code&gt; and &lt;code&gt;Servlet&lt;/code&gt; beans can be disabled by wrapping them in a registration bean with &lt;code&gt;enabled=false&lt;/code&gt;
+&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;... plus a ton of documentation improvements. See &lt;a href="https://github.com/spring-projects/spring-boot/issues?milestone=10&amp;amp;state=closed"&gt;GitHub for the complete list of changes&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Thanks again to all the community contributors who helped with this release. Take it for a ride, today!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://projects.spring.io/spring-boot/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot/issues"&gt;Issues&lt;/a&gt; | &lt;a href="http://docs.spring.io/spring-boot/docs/1.0.2.RELEASE/reference/htmlsingle/"&gt;Documentation&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>This Week in Spring - April 22nd, 2014</title>
     <link rel="alternate" href="https://spring.io/blog/2014/04/22/this-week-in-spring-april-22nd-2014" />
@@ -1015,23 +1060,6 @@ And once you're feeling familiar, take a look at our &lt;a href="https://github.
 &lt;li&gt;Our friend Tobias Flohre's at it again, this time with a post &lt;a href="https://blog.codecentric.de/en/2014/04/spring-batch-batchstatus-state-transitions/"&gt;detailing how the  Spring Batch &lt;code&gt;BatchStatus&lt;/code&gt; works&lt;/a&gt;. Nice!&lt;/li&gt;
 &lt;li&gt;Hortonworks have put up a nice post detailing how to use &lt;a href="http://hortonworks.com/hadoop-tutorial/using-spring-xd-to-stream-tweets-to-hadoop-for-sentiment-analysis/"&gt;Spring XD and Hortonworks Hadoop to stream Tweets to Hadoop for sentiment analysis&lt;/a&gt;. Of course, you could use other Hadoops as well.&lt;/li&gt;
 &lt;/ol&gt;</content>
-  </entry>
-  <entry>
-    <title>Webinar: Building 'Bootiful'? Applications with Spring Boot</title>
-    <link rel="alternate" href="https://spring.io/blog/2014/04/08/webinar-building-bootiful-applications-with-spring-boot" />
-    <category term="news" label="News and Events" />
-    <author>
-      <name>Pieter Humphrey</name>
-    </author>
-    <id>tag:spring.io,2014-04-08:1487</id>
-    <updated>2014-04-08T14:02:00Z</updated>
-    <content type="html">&lt;p&gt;Speaker: Josh Long&lt;/p&gt;
-
-&lt;p&gt;Alright, so maybe "bootiful" won't ever work, but I tried, and it was worth it too because you're reading this. Spring Boot, the new convention-over-configuration centric framework from the Spring team at Pivotal, marries Spring's flexibility with conventional, common sense defaults to make application development not just fly, but pleasant!  Join Spring developer advocate Josh Long for a look at what Spring Boot is, why it's turning heads, why you should consider it for your next application (REST, web, batch, big-data, integration, whatever!) and how to get started.&lt;/p&gt;
-
-&lt;p&gt;Tuesday, April 15, 2014 3:00 pm (London, UTC+01:00) &lt;a href="http://play.gopivotal.com/OSS_Webinar_BuildingbootifulAppswithSpringBoot7AM_Register.html"&gt;Register&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Tuesday, April 15, 2014 10:00 am Pacific Daylight Time (San Francisco, UTC-07:00) &lt;a href="http://play.gopivotal.com/OSS_Webinar_BuildingbootifulAppswithSpringBoot10AM_Register.html"&gt;Register&lt;/a&gt;&lt;/p&gt;</content>
   </entry>
 </feed>
 

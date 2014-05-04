@@ -203,7 +203,7 @@
                                     		<h4>Prélèvements</h4>                                                 
                                     	</div>
                                 		<h5><a href="#">Pour plus d'info</a></h5>
-                                		<a href="<%request.getContextPath();%>resources/text/info.txt" class="fancybox">
+                                		<a href="<%request.getContextPath();%>resources/img/essai.pdf" class="fancybox">
                                 		<i class="fa fa-plus fa-2x"></i></a>
                                 	</div>
 								</div>
@@ -251,7 +251,7 @@
                                     		<h4>Sans Rendez-Vous</h4>
                                     	</div>
                                 		<h5><a href="#">Pour plus d'info</a></h5>
-                                		<a href="<%request.getContextPath();%>resources/img/services/sans_rendez_vous.jpg" class="fancybox">
+                                		<a href="<%request.getContextPath();%>resources/img/services/sans_rendez_vous_text.jpg" class="fancybox">
                                 		<i class="fa fa-plus fa-2x"></i></a>
                                 	</div>
 								</div>

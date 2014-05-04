@@ -1,4 +1,0 @@
-127.0.0.1 - - [23/Apr/2014:23:04:41 -0400] "GET / HTTP/1.1" 404 1003
-0:0:0:0:0:0:0:1 - - [23/Apr/2014:23:04:43 -0400] "GET /clinicplus/ HTTP/1.1" 200 41473
-0:0:0:0:0:0:0:1 - - [23/Apr/2014:23:05:01 -0400] "GET /clinicplus/resources/js/fancybox/fancybox_overlay.png HTTP/1.1" 200 1003
-0:0:0:0:0:0:0:1 - - [23/Apr/2014:23:05:01 -0400] "GET /clinicplus/resources/js/fancybox/fancybox_sprite.png HTTP/1.1" 200 1362

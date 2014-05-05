@@ -38,13 +38,13 @@
 						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
 						<span class="fa fa-bars color-white"></span>
 						</button>
-                    	<h1><a class="navbar-brand" href="index.jsp" data-0="line-height:90px;" data-300="line-height:50px;">
+                    	<h1><a class="navbar-brand" href="#" data-0="line-height:90px;" data-300="line-height:50px;">
                     	C+
 						</a></h1>
 					</div>
 					<div class="navbar-collapse collapse">
 						<ul class="nav navbar-nav" data-0="margin-top:20px;" data-300="margin-top:5px;">
-							<li class="active"><a href="index.jsp">Acceuil</a></li>
+							<li class="active"><a href="#">Acceuil</a></li>
 							<li><a href="#section-a_propos">À Propos</a></li>
                         	<li><a href="#section-services">Services</a></li>
 							<li><a href="#section-equipe">Équipe</a></li>
@@ -203,7 +203,7 @@
                                     		<h4>Prélèvements</h4>                                                 
                                     	</div>
                                 		<h5><a href="#">Pour plus d'info</a></h5>
-                                		<a href="<%request.getContextPath();%>resources/img/essai.pdf" class="fancybox">
+                                		<a href="<%request.getContextPath();%>resources/img/services/prelevement_text.jpg" class="fancybox">
                                 		<i class="fa fa-plus fa-2x"></i></a>
                                 	</div>
 								</div>
@@ -227,7 +227,7 @@
                                 			<h4>Médecine familiale</h4>
                                 		</div>
                             			<h5><a href="#">Pour plus d'info</a></h5>
-                            			<a href="<%request.getContextPath();%>resources/img/services/familiale.jpg" class="fancybox">
+                            			<a href="<%request.getContextPath();%>resources/img/services/familiale_text.jpg" class="fancybox">
                             			<i class="fa fa-plus fa-2x"></i></a>
                             		</div>
 								</div>
@@ -275,7 +275,7 @@
                                     		<h4>Services de santé privés</h4>					
                                     	</div>
                                 		<h5><a href="#">Pour plus d'info</a></h5>
-                                		<a href="<%request.getContextPath();%>resources/img/services/prive.jpg" class="fancybox">
+                                		<a href="<%request.getContextPath();%>resources/img/services/prive_text.jpg" class="fancybox">
                                 		<i class="fa fa-plus fa-2x"></i></a>
                                 	</div>
 								</div>
@@ -464,16 +464,18 @@
 					<div class="col-md-offset-3 col-md-6">
 						<div class="section-header">
 							<h2 class="section-heading animated" data-animation="bounceInUp">Rendez-Vous</h2>
-							<p>Pour vous enregistrer, consulter l'horaire, réserver un rendez-vous.</p>
+							<p>Pour vous connecter, vous enregistrer ou pour consulter l'horaire.  Pour réserver 
+							ou annuler un rendez-vous.  Pour consulter votre dossier.</p>
 						</div>
 					</div>
 				</div>
 				<div class="row">
                 	<nav id="filter" class="col-md-12 text-center"> 
                     	<ul>  
-                        	<li><a href="#"  class="current btn-theme btn-small" data-filter=".connecter" >Se connecter</a></li>
-                            <li><a href="#"  class="btn-theme btn-small" data-filter=".enregistrer">S'enregistrer</a></li>
-                            <li ><a href="#" class="btn-theme btn-small" data-filter=".horaire">Horaire</a></li>
+                        	<li><a href="#" class="current btn-theme btn-small" data-filter=".connecter" >Se connecter</a></li>
+                            <li><a href="#" class="btn-theme btn-small" data-filter=".enregistrer">S'enregistrer</a></li>
+                            <li><a href="#" class="btn-theme btn-small" data-filter=".horaire">Horaire</a></li>
+                            <li><a href="#" class="btn-theme btn-small" data-filter=".dossier">Dossier</a></li>
                         </ul>
                     </nav>
                     <div class="col-md-12">
@@ -487,7 +489,8 @@
 													<div id="sendmessage">
 								 						Vous êtes connecté!
 													</div>
-														<form action="contact/contact.php" method="post" role="form" class="contactForm">
+													<h3 class="box-title">Pour vous connecter.</h3>
+														<form action=action="<%request.getContextPath();%>resources/contact/contact.php" method="post" role="form" class="contactForm">
 							  								<div class="form-group">
 																<label for="email">Votre courriel</label>
 																	<input type="email" class="form-control" name="email" 
@@ -517,29 +520,23 @@
 											<div class="col-md-8 col-md-offset-2">
 												<div class="cform" id="contact-form">
 													<div id="sendmessage">
-								 					Votre message a été envoyé. Merci!
+								 					Vous êtes enregistré!
 													</div>
+													<h3 class="box-title">Pour vous enregistrer.</h3>
 														<form action="<%request.getContextPath();%>resources/contact/contact.php" 
 														method="post" role="form" class="contactForm">
 							  								<div class="form-group">
-																<label for="name">Votre nom</label>
+																<label for="name">Nom</label>
 																	<input type="text" name="name" class="form-control" id="name" 
-																	placeholder="Votre nom" data-rule="maxlen:4" 
+																	placeholder="Nom" data-rule="maxlen:4" 
 																	data-msg="S.V.P. Entrez au moin 4 caractères" />
 																<div class="validation"></div>
 							  								</div>
                                                             <div class="form-group">
-																<label for="prenom">Votre prénom</label>
-																	<input type="text" class="form-control" name="prenom" id="subject" 
-																	placeholder="Votre prénom" data-rule="maxlen:4" 
+																<label for="prenom">Prénom</label>
+																	<input type="text" class="form-control" name="prenom" id="prenom" 
+																	placeholder="Prénom" data-rule="maxlen:4" 
 																	data-msg="S.V.P. Entrez au moin 4 caractères" />
-																<div class="validation"></div>
-							  								</div>
-							  								<div class="form-group">
-																<label for="email">Votre courriel</label>
-																	<input type="email" class="form-control" name="email" id="email" 
-																	placeholder="Votre courriel" data-rule="email" 
-																	data-msg="S.V.P. Entrez un courriel valide" />
 																<div class="validation"></div>
 							  								</div>
 							  								<div class="form-group">
@@ -556,11 +553,53 @@
 																	data-msg="S.V.P. Entrez au moin 4 caractères" />
 																<div class="validation"></div>
 							  								</div>
+							  								<div class="form-group">
+																<label for="pays">Pays</label>
+																	<input type="text" class="form-control" name="pays" id="pays" 
+																	placeholder="Pays" data-rule="maxlen:4" 
+																	data-msg="S.V.P. Entrez au moin 4 caractères" />
+																<div class="validation"></div>
+							  								</div>
+							  								<div class="form-group">
+																<label for="province">Province</label>
+																	<input type="text" class="form-control" name="province" id="province" 
+																	placeholder="Province" data-rule="maxlen:4" 
+																	data-msg="S.V.P. Entrez au moin 4 caractères" />
+																<div class="validation"></div>
+							  								</div>
                                                             <div class="form-group">
 																<label for="codePostal">Code Postal</label>
 																	<input type="text" class="form-control" name="codePostal" id="codePostal" 
 																	placeholder="Code Postal" data-rule="maxlen:4" 
 																	data-msg="S.V.P. Entrez au moin 6 caractères" />
+																<div class="validation"></div>
+							  								</div>
+							  								<div class="form-group">
+																<label for="telephone">Téléphone</label>
+																	<input type="text" class="form-control" name="telephone" id="telephone" 
+																	placeholder="Téléphone" data-rule="maxlen:4" 
+																	data-msg="S.V.P. Entrez au moin 6 caractères" />
+																<div class="validation"></div>
+							  								</div>
+							  								<div class="form-group">
+																<label for="email">Courriel</label>
+																	<input type="email" class="form-control" name="email" id="email" 
+																	placeholder="Courriel" data-rule="email" 
+																	data-msg="S.V.P. Entrez un courriel valide" />
+																<div class="validation"></div>
+							  								</div>
+							  								<div class="form-group">
+																<label for="password">Entrez un mot de passe</label>
+																	<input type="password" name="password" class="form-control" id="password" 
+																	placeholder="Entrez un mot de passe" data-rule="password" 
+																	data-msg="S.V.P. Entrez au moin 4 caractères" />
+																<div class="validation"></div>
+							  								</div>
+							  								<div class="form-group">
+																<label for="password">Entrez à nouveau votre mot de passe</label>
+																	<input type="password" name="password" class="form-control" id="password" 
+																	placeholder="Entrez à nouveau votre mot de passe" data-rule="password" 
+																	data-msg="S.V.P. Entrez au moin 4 caractères" />
 																<div class="validation"></div>
 							  								</div>
 							  								<button type="submit" class="btn btn-theme pull-left">S'enregistrer</button>
@@ -579,8 +618,9 @@
                         						<div class="col-xs-12">
                             						<div class="box">
                                 						<div class="box-header">
-                                    						<h3 class="box-title">Horaire des rendez-vous</h3>                                    
+                                    						<h3 class="box-title">Horaire des rendez-vous.</h3>	                              
                                 						</div><!-- /.box-header -->
+                                						
                                 						<div class="box-body table-responsive">
                                     						<table id="Horaire" class="table table-bordered table-hover">
                                         						<thead>                              
@@ -591,14 +631,18 @@
   																				<button class="btn btn-info">Spécisaliste</button>
   																				<button class="btn dropdown-toggle" data-toggle="dropdown"> <span class="caret"></span> </button>
   																				<ul class="dropdown-menu">
-    																				<li><a href="#"><i class="icon-user"></i> Dr. Mann</a></li>
-    																				<li><a href="#"><i class="icon-user"></i> Dr. Ui</a></li>
-    																				<li><a href="#"><i class="icon-user"></i> Dr. Chose</a></li>
-    																				<li><a href="#"><i class="icon-user"></i> Dr. Chose2</a></li>
-    																				<li><a href="#"><i class="icon-user"></i> Dr. Chose3</a></li>
-    																				<li><a href="#"><i class="icon-user"></i> Dr. Chose4</a></li>
-    																				<li class="divider"></li>
-    																				<li><a href="#"><i class="icon-user"></i> Inf. Flouflou</a></li>
+  																					<li class="divider">Médecins</li>
+    																				<li><a href=""><i class="icon-user"></i> Dr. Mann</a></li>
+    																				<li><a href=""><i class="icon-user"></i> Dr. Simon</a></li>
+    																				<li class="divider">Infirmières/Infirmiers</li>
+    																				<li><a href=""><i class="icon-user"></i> Ali</a></li>
+    																				<li><a href=""><i class="icon-user"></i> Marie</a></li>
+    																				<li><a href=""><i class="icon-user"></i> Sue</a></li>
+    																				<li><a href=""><i class="icon-user"></i> Suzane</a></li>
+    																				<li class="divider">Infirmières Praticiennes</li>
+    																				<li><a href=""><i class="icon-user"></i> Julie</a></li>
+    																				<li><a href=""><i class="icon-user"></i> Manon</a></li>
+    																				<li><a href=""><i class="icon-user"></i> Suzie</a></li>
   																				</ul>
 																			</div>
 																		</th>
@@ -607,8 +651,8 @@
   																				<button class="btn btn-info">Disponibilité</button>
   																				<button class="btn dropdown-toggle" data-toggle="dropdown"> <span class="caret"></span> </button>
   																				<ul class="dropdown-menu">
-    																				<li><a href="#"><i class="icon-user"></i> Libre</a></li>
-    																				<li><a href="#"><i class="icon-user"></i> Occupé</a></li>
+    																				<li><a href=""><i class="icon-user"></i> Libre</a></li>
+    																				<li><a href=""><i class="icon-user"></i> Occupé</a></li>
     																			</ul>
 																			</div>
 																		</th>
@@ -618,56 +662,56 @@
                                         						<tbody>
                                             						<tr th:each="docteur,status : ${menuItems}">
                                                 						<td>08:00</td>
-                                                						<td>th:text="${docteur.name}"</td>
-                                                						<td>th:text="${docteur.disp}"</td>
+                                                						<td>Dr. Mann</td>
+                                                						<td>Occupé</td>
                                                 						<td> <div class="form-group"><input type="radio" 
                                                 						name="r2" class="minimal-red"/></div></td>
                                             						</tr>
                                             						<tr>
                                                 						<td>08:30</td>
-                                                						<td>Dr. Ui</td>
+                                                						<td>Dr. Mann</td>
                                                 						<td>Occupé</td>
                                                  					<td> <div class="form-group"><input type="radio" 
                                                  					name="r2" class="minimal-red"/></div></td>
                                             						</tr>
                                             						<tr>
                                                 						<td>09:00</td>
-                                                						<td>Dr. Ui</td>
+                                                						<td>Dr. Mann</td>
                                                 						<td>Occupé</td>
                                                  						<td> <div class="form-group"><input type="radio" 
                                                  						name="r2" class="minimal-red"/></div></td>
                                             						</tr>
                                             						<tr>
                                                 						<td>09:30</td>
-                                                						<td>Dr. Ui</td>
+                                                						<td>Dr. Mann</td>
                                                 						<td>Occupé</td>
                                                  						<td> <div class="form-group"><input type="radio" 
                                                  						name="r2" class="minimal-red"/></div></td>
                                             						</tr>
                                             						<tr>
                                                 						<td>10:00</td>
-                                                						<td>Dr. Ui</td>
+                                                						<td>Dr. Mann</td>
                                                 						<td>Libre</td>
                                                  						<td> <div class="form-group"><input type="radio" 
                                                  						name="r2" class="minimal-red"/></div></td>
                                             						</tr>
                                             						<tr>
                                                 						<td>10:30</td>
-                                                						<td>Dr. Ui</td>
+                                                						<td>Dr. Mann</td>
                                                 						<td>Libre</td>
                                                  						<td> <div class="form-group"><input type="radio" 
                                                  						name="r2" class="minimal-red"/></div></td>
                                             						</tr>
                                             						<tr>
                                                 						<td>11:00</td>
-                                                						<td>Dr. Ui</td>
+                                                						<td>Dr. Mann</td>
                                                 						<td>Occupé</td>
                                                  						<td> <div class="form-group"><input type="radio" 
                                                  						name="r2" class="minimal-red"/></div></td>
                                             						</tr>
                                             						<tr>
                                                 						<td>11:30</td>
-                                                						<td>Dr. Ui</td>
+                                                						<td>Dr. Mann</td>
                                                 						<td>Occupé</td>
                                                  						<td> <div class="form-group"><input type="radio" 
                                                  						name="r2" class="minimal-red"/></div></td>
@@ -678,11 +722,41 @@
                                                 						<th>Heure</th>
                                                 						<th>Spécisaliste</th>
                                                 						<th>Disponibilité</th>
-                                                						<th>Réserver</th>
+                                                						<th><button type="submit" class="btn btn-theme pull-left">Réserver</button></th>
+                                                					</tr>
+                                            					</tfoot>                  
+                                    						</table>	
+                                    					</div><!-- /.box-body -->
+                                    					<br>
+                                    					<h3 class="box-title">Votre Rendez-Vous.</h3>
+                                    					<div class="box-body table-responsive">
+                                    						<table id="Horaire" class="table table-bordered table-hover">
+                                        						<thead>                              
+                                            						<tr>
+                                                						<th>Heure</th>
+                                                						<th>Spécisaliste</th>
+                                                						<th>Disponibilité</th>
+                                                						<th></th>
+                                                					</tr>
+                                        						</thead>
+                                        						<tbody>
+                                            						<tr th:each="docteur,status : ${menuItems}">
+                                                						<td>08:00</td>
+                                                						<td>Dr. Mann</td>
+                                                						<td>Occupé</td>
+                                                						<td> <div class="form-group"><input type="radio" 
+                                                						name="r2" class="minimal-red"/></div></td>
+                                            						</tr>
+                                        						</tbody>
+                                        						<tfoot>
+                                            						<tr>
+                                                						<th>Heure</th>
+                                                						<th>Spécisaliste</th>
+                                                						<th>Disponibilité</th>
+                                                						<th><button type="submit" class="btn btn-theme pull-left">Annuler</button></th>
                                                 					</tr>
                                             					</tfoot>                  
                                     						</table>
-                                   							<button type="submit" class="btn btn-theme pull-left">Réserver</button>
                                     					</div><!-- /.box-body -->
                             						</div><!-- /.box -->
                             					</div>
@@ -690,6 +764,26 @@
                             			</section>
                             		</div>
 								</article>
+								
+								<article class="col-md-4 isotopeItem dossier">
+                					<div class="container">
+                						<section class="content">
+                    						<div class="row">
+                        						<div class="col-xs-12">
+                            						<div class="box">
+                                						<div class="box-header">
+                                    						<h3 class="box-title">Votre dossier en ligne!</h3>                                    
+                                						</div><!-- /.box-header -->
+                                						<div class="box-body table-responsive">
+                                    						<b>Consultation de votre dossier à venir</b>
+                                    					</div><!-- /.box-body -->
+                            						</div><!-- /.box -->
+                            					</div>
+                            				</div>	
+                            			</section>
+                            		</div>
+								</article>
+								
                     		</div>
                 		</div>
             		</div>

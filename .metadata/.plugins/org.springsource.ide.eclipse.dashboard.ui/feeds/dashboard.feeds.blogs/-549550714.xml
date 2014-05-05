@@ -5,7 +5,20 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2014-05-05T15:07:00Z</updated>
+  <updated>2014-05-05T21:47:05Z</updated>
+  <entry>
+    <title>Spring Security 4.0.0.M1 Released</title>
+    <link rel="alternate" href="https://spring.io/blog/2014/05/05/spring-security-4-0-0-m1-released" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Rob Winch</name>
+    </author>
+    <id>tag:spring.io,2014-05-05:1554</id>
+    <updated>2014-05-05T21:47:05Z</updated>
+    <content type="html">&lt;p&gt;I'm pleased to announce the release of Spring Security 4.0.0.M1 available in the Spring &lt;a href="http://docs.spring.io/spring-security/site/docs/4.0.0.M1/reference/htmlsingle/#get-spring-security"&gt;Milestone repository&lt;/a&gt;. The primary component of this first milestone is testing support. Stay tuned to the &lt;a href="http://spring.io/blog"&gt;spring.io blog&lt;/a&gt; for a post introducing the test support. If you can't wait to try it out, see the tests in the &lt;a href="https://github.com/spring-projects/spring-security/tree/4.0.0.M1/test/src/test/java/org/springframework/security/test/web/servlet/showcase"&gt;showcase package&lt;/a&gt; which demonstrate some of the highlights.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://docs.spring.io/spring-security/site/docs/4.0.0.M1/reference/htmlsingle/"&gt;Reference&lt;/a&gt; | &lt;a href="http://docs.spring.io/spring-security/site/docs/4.0.0.M1/apidocs/"&gt;Javadoc&lt;/a&gt; | &lt;a href="http://docs.spring.io/spring-security/site/docs/4.0.0.M1/guides/"&gt;Guides&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Spring for Apache Hadoop 2.0 RC3 released</title>
     <link rel="alternate" href="https://spring.io/blog/2014/05/05/spring-for-apache-hadoop-2-0-rc3-released" />
@@ -802,49 +815,6 @@ hand all that's going on and to provide direct feedback. Expect a number of sign
 &lt;p&gt;The Authorization Server APIs have been refactored a lot to enable new use cases to be easily added: for example OpenID Connect (OIDC), MAC tokens, or the new Token Revocation standard are easy to add. I know of at least one OIDC implementation that use Spring OAuth2 2.0 already.&lt;/p&gt;
 
 &lt;p&gt;There are plenty of people to thank for their help in this work, but our own Rob Winch deserves a big shout out for getting the ball rolling with the &lt;code&gt;@Configuration&lt;/code&gt; work. During the work on 2.0 we moved everything including issue tracking to github, and I think the result has been more community engagement, so many of the contributors this time are directly from people using the software, which is great. Thanks to everyone who helped!&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring XD 1.0.0.M6 Released</title>
-    <link rel="alternate" href="https://spring.io/blog/2014/04/16/spring-xd-1-0-0-m6-released" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Mark Pollack</name>
-    </author>
-    <id>tag:spring.io,2014-04-09:1492</id>
-    <updated>2014-04-16T16:17:07Z</updated>
-    <content type="html">&lt;p&gt;The Spring XD team is pleased to announce that Spring XD Milestone 6 is now &lt;a href="http://repo.spring.io/simple/libs-milestone-local/org/springframework/xd/spring-xd/1.0.0.M6/spring-xd-1.0.0.M6-dist.zip"&gt;available for download&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;This is our biggest release yet! The team has been hard at work, and Milestone 6 contains a wealth of new features that meet enterprise requirements in terms of reliability, performance, and user experience. Below is a quick Top Ten (in no particular order), but if you checkout the &lt;a href="https://jira.spring.io/secure/ReleaseNote.jspa?projectId=11401&amp;amp;version=14323"&gt;release notes&lt;/a&gt; you will realize how difficult it is to pick out 10 from the list of 299.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href="https://github.com/spring-projects/spring-xd/wiki/XD-Distributed-Runtime"&gt;Distributed and Fault Tolerant Runtime&lt;/a&gt;: Leader election among multiple xd-admin servers and automatic redeployment of modules to other xd-containers in the case of failure. ZooKeeper is introduced to manage the cluster and its deployment state.  &lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href="https://github.com/spring-projects/spring-xd/wiki/Running-on-YARN"&gt;Support for running XD on YARN&lt;/a&gt;: Run admin and container nodes on a Hadoop YARN cluster rather than on VMs or physical servers that you need to manage. There are simple configuration and shell scripts that make this process very easy.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href="https://github.com/spring-projects/spring-xd/wiki/XD-Distributed-Runtime#deployment-manifest"&gt;Deployment Manifests&lt;/a&gt;: When deploying a stream you can provide a deployment manifest that describes how to transform the logical stream definition (e.g. http | hdfs) to a physical deployment on the cluster. You can specify the number of instances of each module to deploy and also a criteria expression (using SpEL) that evaluates each of the available containers in the cluster to determine the best matches for those module instances. This will be an area of active development for the next release as we extend the manifest to include support for data partitioning strategies.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href="https://github.com/spring-projects/spring-xd/wiki/Analytics"&gt;Real-Time Evaluation of Machine Learning Scoring Algorithms&lt;/a&gt;: Integration with the JPMML-Evaluator library that provides support for a wide range of model types and is interoperable with models exported from popular data analysis packages such as &lt;a href="http://www.r-project.org/"&gt;R&lt;/a&gt;. Integration with other libraries is supported by providing an implementation of XD's Analytic and MappedAnalytic abstractions. Give it a try with the &lt;a href="https://github.com/spring-projects/spring-xd-samples/tree/master/analytics-pmml"&gt;sample application&lt;/a&gt; based on the &lt;a href="http://en.wikipedia.org/wiki/Iris_flower_data_set"&gt;classic iris data set&lt;/a&gt;. &lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href="https://github.com/spring-projects/spring-xd/wiki/AdminUI"&gt;Updated UI&lt;/a&gt;: A redesign and rewrite of the UI that has a modern look and feel. &lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Enhanced DSL Auto-completion: Tab completion now works within the value of the --definition option when creating streams and jobs.  Creating streams and jobs has never been easier.  Try it out via xd-shell!&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href="https://github.com/spring-projects/spring-xd/wiki/Batch-Jobs#retrieve-job-notifications"&gt;Default stream for the Batch Job lifecycle&lt;/a&gt;:  Batch jobs are a source of event data.  Add a tap to a Batch Job to receive events upon upon job success/failure, individual step actions or even item level actions.  This functionality along with the support for launching jobs by sending messages to a named channel, enables your applications to have a complex event-driven flow between the batch and streaming domains.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href="https://github.com/spring-projects/spring-xd/wiki/Application-Configuration"&gt;Improved server and module configuration options&lt;/a&gt;:  Server and module configuration have been separated to help with the life-cycle of upgrading them independently.  Module configuration has been made more modular while allowing for shared configuration between related modules.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href="https://github.com/spring-projects/spring-xd/wiki/Sources#reactor-ip"&gt;High performance TCP/UDP source&lt;/a&gt;: Based on the Reactor project - the Reactor IP source on commodity hardware can consume ~1 Million msgs/second.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href="https://github.com/spring-projects/spring-xd/wiki/Batch-Jobs#ftp-to-hdfs-export-ftphdfs"&gt;FTP to HDFS job&lt;/a&gt;: Out of the box support for jobs to transfer files from FTP to HDFS. Those jobs take advantage of another new feature: partitioning of steps across multiple XD Containers.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;p&gt;&lt;strong&gt;Wrapping up&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;You can also install Spring XD on OSX &lt;a href="https://github.com/spring-projects/spring-xd/wiki/Getting-Started#osx-homebrew-installation"&gt;using homebrew&lt;/a&gt; and on RHEL/CentOs &lt;a href="https://github.com/spring-projects/spring-xd/wiki/Getting-Started#redhatcentos-installation"&gt;using yum&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;The Spring XD &lt;a href="http://projects.spring.io/spring-xd/"&gt;project home&lt;/a&gt; is the central hub for learning more about Spring XD.  Some useful links are the &lt;a href="http://docs.spring.io/spring-xd/docs/1.0.0.M6/reference/html/"&gt;reference docs&lt;/a&gt;, &lt;a href="https://github.com/spring-projects/spring-xd-samples"&gt;sample applications&lt;/a&gt;, and &lt;a href="https://spring.io/blog/2013/11/20/qcon-sf-2013-session-replay-introducing-spring-xd"&gt;QCon SF 2013 Session Replay: Introducing Spring XD&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;We look forward to your comments and feedback:  &lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;
-&lt;a href="http://stackoverflow.com/questions/tagged/spring-xd"&gt;StackOverflow&lt;/a&gt; &lt;code&gt;spring-xd&lt;/code&gt; tag&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://forum.spring.io/forum/spring-projects/xd"&gt;Spring Forum&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://jira.spring.io/browse/XD"&gt;Spring JIRA&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;p&gt;Our plan is to have a one month cadence of releases leading up to a GA release in July.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;SpringOne 2GX 2014 is around the corner&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Book your place at &lt;a href="http://www.springone2gx.com/"&gt;SpringOne in Dallas, TX&lt;/a&gt; for Sept 8-11 soon. It's simply the best opportunity to find out first hand all that's going on and to provide direct feedback.   There will be deep dive sessions on Spring XD along with general Big Data talks to provide an introduction to the landscape and challenges in developing Big Data applications.&lt;/p&gt;</content>
   </entry>
 </feed>
 

@@ -5,7 +5,49 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2014-05-02T15:09:00Z</updated>
+  <updated>2014-05-05T15:07:00Z</updated>
+  <entry>
+    <title>Spring for Apache Hadoop 2.0 RC3 released</title>
+    <link rel="alternate" href="https://spring.io/blog/2014/05/05/spring-for-apache-hadoop-2-0-rc3-released" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Thomas Risberg</name>
+    </author>
+    <id>tag:spring.io,2014-05-05:1553</id>
+    <updated>2014-05-05T15:07:00Z</updated>
+    <content type="html">&lt;p&gt;We are happy to announce that Spring for Apache Hadoop version 2.0 RC3 has just been released. &lt;/p&gt;
+
+&lt;hr&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Now includes support for the latest Hadoop distributions - Pivotal HD 2.0, Cloudera CDH5 and Hortonworks HDP 2.1&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;hr&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Other than version upgrades, the changes in this version revolve around partitioning support for writing datasets &lt;a href="https://jira.spring.io/browse/SHDP-327"&gt;SHDP-327&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The main focus for Spring for Apache Hadoop 2.0 is to add YARN application development support in addition to continue to provide 
+improvements in the HDFS and MapReduce support. You can see many of these new YARN features in use in 
+the &lt;a href="https://github.com/SpringSource/spring-hadoop-samples/tree/master/yarn"&gt;YARN samples&lt;/a&gt; and in the 
+new &lt;a href="https://spring.io/guides?filter=yarn"&gt;Spring IO Guides&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The default distribution for the Spring for Apache Hadoop 2.0 releases is the current Apache Hadoop 2 stable release which is 2.2.0.&lt;/p&gt;
+
+&lt;p&gt;We continue to provide version specific artifacts with their respective transitive dependencies in the Spring IO milestone repository:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;2.0.0.RC3 (default - Apache Hadoop stable 2.2.0)&lt;/li&gt;
+&lt;li&gt;2.0.0.RC3-hadoop12 (Apache Hadoop stable 1.2.1)&lt;/li&gt;
+&lt;li&gt;2.0.0.RC3-phd1 (Pivotal HD 1.1)&lt;/li&gt;
+&lt;li&gt;2.0.0.RC3-phd20 (Pivotal HD 2.0)&lt;/li&gt;
+&lt;li&gt;2.0.0.RC3-cdh4 (Cloudera CDH4 MR1)&lt;/li&gt;
+&lt;li&gt;2.0.0.RC3-cdh5 (Cloudera CDH5 YARN)&lt;/li&gt;
+&lt;li&gt;2.0.0.RC3-hdp13 (Hortonworks HDP 1.3)&lt;/li&gt;
+&lt;li&gt;2.0.0.RC3-hdp20 (Hortonworks HDP 2.0)&lt;/li&gt;
+&lt;li&gt;2.0.0.RC3-hdp21 (Hortonworks HDP 2.1)&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;For instructions on how to build with these versions see the &lt;a href="https://github.com/spring-projects/spring-hadoop/wiki#building-using-supported-distributions"&gt;project wiki&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;For more project specific information please see the &lt;a href="http://projects.spring.io/spring-hadoop/"&gt;project page&lt;/a&gt;.&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Spring Data release train Dijkstra RC1 released</title>
     <link rel="alternate" href="https://spring.io/blog/2014/05/02/spring-data-release-train-dijkstra-rc1-released" />
@@ -803,27 +845,6 @@ hand all that's going on and to provide direct feedback. Expect a number of sign
 &lt;p&gt;&lt;strong&gt;SpringOne 2GX 2014 is around the corner&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Book your place at &lt;a href="http://www.springone2gx.com/"&gt;SpringOne in Dallas, TX&lt;/a&gt; for Sept 8-11 soon. It's simply the best opportunity to find out first hand all that's going on and to provide direct feedback.   There will be deep dive sessions on Spring XD along with general Big Data talks to provide an introduction to the landscape and challenges in developing Big Data applications.&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Webinar Replay: Building 'Bootiful'? Applications with Spring Boot</title>
-    <link rel="alternate" href="https://spring.io/blog/2014/04/16/webinar-replay-building-bootiful-applications-with-spring-boot" />
-    <category term="news" label="News and Events" />
-    <author>
-      <name>Pieter Humphrey</name>
-    </author>
-    <id>tag:spring.io,2014-04-17:1507</id>
-    <updated>2014-04-16T16:14:00Z</updated>
-    <content type="html">&lt;p&gt;Recorded at SpringOne2GX 2013, in Santa Clara, CA&lt;/p&gt;
-
-&lt;p&gt;Speakers:  Josh Long &lt;/p&gt;
-
-&lt;p&gt;Alright, so maybe "bootiful" won't ever work, but I tried, and it was worth it too because you're reading this. Spring Boot, the new convention-over-configuration centric framework from the Spring team at Pivotal, marries Spring's flexibility with conventional, common sense defaults to make application development not just fly, but pleasant!  Join Spring developer advocate Josh Long for a look at what Spring Boot is, why it's turning heads, why you should consider it for your next application (REST, micro services, web, batch, big data, integration, whatever!) and how to get started.&lt;/p&gt;
-
-&lt;p&gt;Learn more about  Spring Boot at: &lt;a href="http://projects.spring.io/spring-boot"&gt;http://projects.spring.io/spring-boot&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Learn more about  Spring at: &lt;a href="http://projects.spring.io/spring-framework"&gt;http://projects.spring.io/spring-framework&lt;/a&gt;&lt;/p&gt;
-
-&lt;iframe width="420" height="315" src="//www.youtube.com/embed/T7kLMrqNI9k" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</content>
   </entry>
 </feed>
 

@@ -479,3 +479,14 @@
 0:0:0:0:0:0:0:1 - - [04/May/2014:22:02:57 -0400] "GET /clinicplus/resources/img/services/sans_rendez_vous_text.jpg HTTP/1.1" 304 -
 0:0:0:0:0:0:0:1 - - [04/May/2014:22:03:00 -0400] "GET /clinicplus/resources/img/services/familiale_text.jpg HTTP/1.1" 304 -
 0:0:0:0:0:0:0:1 - - [04/May/2014:22:04:05 -0400] "GET /clinicplus/ HTTP/1.1" 200 47330
+127.0.0.1 - - [04/May/2014:22:48:19 -0400] "GET / HTTP/1.1" 404 962
+0:0:0:0:0:0:0:1 - - [04/May/2014:22:48:21 -0400] "GET /clinicplus/ HTTP/1.1" 200 10698
+0:0:0:0:0:0:0:1 - - [04/May/2014:22:48:22 -0400] "GET /clinicplus/img/avatar/avatar_dr_simon.png HTTP/1.1" 404 960
+0:0:0:0:0:0:0:1 - - [04/May/2014:22:48:29 -0400] "GET / HTTP/1.1" 404 962
+0:0:0:0:0:0:0:1 - - [04/May/2014:22:48:37 -0400] "GET /clinicplus/ HTTP/1.1" 200 10698
+0:0:0:0:0:0:0:1 - - [04/May/2014:22:48:37 -0400] "GET /clinicplus/img/avatar/avatar_dr_simon.png HTTP/1.1" 404 960
+0:0:0:0:0:0:0:1 - - [04/May/2014:22:48:38 -0400] "GET /clinicplus/resources/fonts/glyphicons-halflings-regular.svg HTTP/1.1" 200 13565
+0:0:0:0:0:0:0:1 - - [04/May/2014:22:48:41 -0400] "GET /clinicplus/resources/pages/calendar.jsp HTTP/1.1" 200 21069
+0:0:0:0:0:0:0:1 - - [04/May/2014:22:48:41 -0400] "GET /clinicplus/resources/pages/img/avatar/avatar_dr_simon.png HTTP/1.1" 404 960
+0:0:0:0:0:0:0:1 - - [04/May/2014:22:48:41 -0400] "GET /clinicplus/resources/css/fullcalendar/fullcalendar.print.css HTTP/1.1" 200 708
+0:0:0:0:0:0:0:1 - - [04/May/2014:22:48:41 -0400] "GET /clinicplus/resources/css/iCheck/minimal/minimal.png HTTP/1.1" 200 1114

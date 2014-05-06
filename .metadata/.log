@@ -4227,3 +4227,63 @@ Caused by: java.net.ConnectException: Operation timed out
 
 !ENTRY org.eclipse.m2e.logback.appender 2 0 2014-05-05 20:57:46.352
 !MESSAGE Using platform encoding (US-ASCII actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2014-05-05 22:04:28.343
+!MESSAGE Using platform encoding (US-ASCII actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2014-05-05 22:04:28.347
+!MESSAGE Using platform encoding (US-ASCII actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2014-05-05 22:05:19.703
+!MESSAGE Using platform encoding (US-ASCII actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2014-05-05 22:05:19.709
+!MESSAGE Using platform encoding (US-ASCII actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2014-05-05 22:05:29.895
+!MESSAGE Using platform encoding (US-ASCII actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2014-05-05 22:05:29.898
+!MESSAGE Using platform encoding (US-ASCII actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2014-05-05 22:06:00.162
+!MESSAGE Using platform encoding (US-ASCII actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2014-05-05 22:06:00.167
+!MESSAGE Using platform encoding (US-ASCII actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2014-05-05 22:07:20.811
+!MESSAGE Using platform encoding (US-ASCII actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2014-05-05 22:07:20.814
+!MESSAGE Using platform encoding (US-ASCII actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2014-05-05 22:09:16.240
+!MESSAGE Using platform encoding (US-ASCII actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2014-05-05 22:09:16.273
+!MESSAGE Using platform encoding (US-ASCII actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2014-05-05 22:09:29.723
+!MESSAGE Using platform encoding (US-ASCII actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2014-05-05 22:09:29.726
+!MESSAGE Using platform encoding (US-ASCII actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2014-05-05 22:09:59.411
+!MESSAGE Using platform encoding (US-ASCII actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2014-05-05 22:09:59.444
+!MESSAGE Using platform encoding (US-ASCII actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2014-05-05 22:10:27.535
+!MESSAGE Using platform encoding (US-ASCII actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2014-05-05 22:10:27.538
+!MESSAGE Using platform encoding (US-ASCII actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2014-05-05 22:10:46.147
+!MESSAGE Using platform encoding (US-ASCII actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2014-05-05 22:10:46.153
+!MESSAGE Using platform encoding (US-ASCII actually) to copy filtered resources, i.e. build is platform dependent!

@@ -205,6 +205,25 @@ The first milestone build is scheduled to arrive in late May 2014.&lt;/p&gt;
 &lt;p&gt;[6] - &lt;a href="http://repo.spring.io/libs-release/org/projectreactor/spring/"&gt;http://repo.spring.io/libs-release/org/projectreactor/spring/&lt;/a&gt;&lt;/p&gt;</content>
   </entry>
   <entry>
+    <title>SpringOne2GX 2013 Replay: Building Spring Applications on Cloud Foundry</title>
+    <link rel="alternate" href="https://spring.io/blog/2014/05/06/springone2gx-2013-replay-building-spring-applications-on-cloud-foundry" />
+    <category term="news" label="News and Events" />
+    <author>
+      <name>Pieter Humphrey</name>
+    </author>
+    <id>tag:spring.io,2014-05-06:1557</id>
+    <updated>2014-05-06T13:22:00Z</updated>
+    <content type="html">&lt;p&gt;Building Spring Applications on Cloud Foundry&lt;/p&gt;
+
+&lt;p&gt;Recorded at SpringOne2GX 2013 in Santa Clara, CA. &lt;/p&gt;
+
+&lt;p&gt;Speaker: Josh Long and Andy Piper &lt;/p&gt;
+
+&lt;p&gt;Let's face it, the cloud is here to stay. The cloud's potential can seem sometimes overwhelming, but it doesn't have to if you use Spring. Spring - and the various Spring projects - already embrace the architecture characteristics that make for great, cloud-centric applications in any environment. While Spring works well on any cloud platform, it enjoys a special place in the sun on Cloud Foundry, the open source PaaS from Pivotal. In this talk, join Andy Piper as he introduces how to build Spring applications that work well in the cloud and on Cloud Foundry in particular. We'll cover how to consume services with Spring on Cloud Foundry, how to scale out using RabbitMQ and Spring Integration, how to use standalone processes and RabbitMQ for better batch processing, and discuss strategies for exposing and consuming services in a RESTful service-based cloud architecture. Learn more about spring and Cloud Foundy at  &lt;a href="http://docs.cloudfoundry.com/docs/using/deploying-apps/jvm/index.html"&gt;http://docs.cloudfoundry.com/docs/using/deploying-apps/jvm/index.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;iframe width="560" height="315" src="//www.youtube.com/embed/W69nmjyDNls" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</content>
+  </entry>
+  <entry>
     <title>Spring Security 4.0.0.M1 Released</title>
     <link rel="alternate" href="https://spring.io/blog/2014/05/05/spring-security-4-0-0-m1-released" />
     <category term="engineering" label="Engineering" />
@@ -856,23 +875,6 @@ hand all that's going on and to provide direct feedback. Expect a number of sign
 &lt;p&gt;Tuesday, May 20, 2014 3:00 pm BST Time (London, UTC+1) &lt;a href="http://play.gopivotal.com/OSS_Webinar_Neo4JTechnology7AM_Register.html"&gt;Register&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Tuesday, May 20, 2014 10:00 am Pacific Daylight Time (San Francisco, UTC-07:00) &lt;a href="http://play.gopivotal.com/OSS_Webinar_Neo4JTechnology10AM_Register.html"&gt;Register&lt;/a&gt;&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Webinar: Spring Integration 4.0 - The New Frontier</title>
-    <link rel="alternate" href="https://spring.io/blog/2014/04/22/webinar-spring-integration-4-0-the-new-frontier" />
-    <category term="news" label="News and Events" />
-    <author>
-      <name>Pieter Humphrey</name>
-    </author>
-    <id>tag:spring.io,2014-04-22:1532</id>
-    <updated>2014-04-22T09:50:00Z</updated>
-    <content type="html">&lt;p&gt;Speaker: Gary Russell&lt;/p&gt;
-
-&lt;p&gt;The Spring Integration team has been hard at work on the latest release of the popular integration framework. Before version 4.0, it was impractical to define a complete Spring Integration flow without using XML. With this major release, the existing basic annotation support has received an overhaul and those who prefer to use java @Configuration classes can now define their applications without needing to use any XML (of course, XML is still supported as well). In this session we will cover these major changes to the framework, explaining how and when to use them. It will be mainly demonstration and code walk through, and we will build a useful Spring Boot / Integration application from scratch.&lt;/p&gt;
-
-&lt;p&gt;Tuesday, May 13, 2014 3:00 pm BST Time (London, UTC+1) &lt;a href="http://play.gopivotal.com/OSS_Webinar_SpringIntegration4.0TheNewFrontier7AM_Register.html"&gt;Register&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Tuesday, May 13, 2014 10:00 am Pacific Daylight Time (San Francisco, UTC-07:00) &lt;a href="http://play.gopivotal.com/OSS_Webinar_SpringIntegration4.0TheNewFrontier10AM_Register.html"&gt;Register&lt;/a&gt;&lt;/p&gt;</content>
   </entry>
 </feed>
 

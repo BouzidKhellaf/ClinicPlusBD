@@ -20,7 +20,6 @@ INDEX VERSION 1.126+/Users/jonathandesjardins/ClinicPlusBD/.metadata/.plugins/or
 1384487945.index
 579254722.index
 720160152.index
-178538698.index
 3932366377.index
 3712507179.index
 499859212.index

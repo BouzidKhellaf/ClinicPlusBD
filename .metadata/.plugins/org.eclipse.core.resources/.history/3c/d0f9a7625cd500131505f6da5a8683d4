@@ -1,0 +1,5 @@
+package com.ogtime.clinicplus.metier;
+
+public class RendezvousMetier {
+
+}

@@ -42,3 +42,31 @@
 1399334097065	Rename resource 'admin.jsp'
 1399336868009	Delete element
 1399341919259	Delete element
+1399406514581	Delete element
+1399406583448	Delete element
+1399407584189	Delete element
+1399407603002	Delete element
+1399407790056	Move compilation units
+1399407807647	Move compilation units
+1399407842217	Move compilation units
+1399407852122	Move compilation units
+1399409253269	Rename package 'com.ogtime.clinicplus'
+1399409305890	Rename type 'AdminDAO'
+1399409337302	Rename type 'CliniqueDAO'
+1399409343606	Rename type 'ConsultationDAO'
+1399409349627	Rename type 'DossierDAO'
+1399409358962	Rename type 'HoraireDAO'
+1399409366966	Rename type 'LigneConsultationDAO'
+1399409377980	Rename type 'MedecinDAO'
+1399409385708	Rename type 'PatientDAO'
+1399409394676	Rename type 'RendezvousDAO'
+1399409409398	Rename type 'AdminMetier'
+1399409416844	Rename type 'CliniqueMetier'
+1399409429031	Rename type 'ConsultationMetier'
+1399409436732	Rename type 'DossierMetier'
+1399409443689	Rename type 'HoraireMetier'
+1399409450110	Rename type 'LigneConsultationMetier'
+1399409457353	Rename type 'MedecinMetier'
+1399409464645	Rename type 'PatientMetier'
+1399409472168	Rename type 'RendezvousMetier'
+1399411682648	Delete element

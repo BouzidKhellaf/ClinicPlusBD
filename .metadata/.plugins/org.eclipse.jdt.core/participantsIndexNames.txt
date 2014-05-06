@@ -1,9 +1,19 @@
 INDEX VERSION 1.126
+/Users/jonathandesjardins/ClinicPlusBD/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/1038012536.index
+/clinicPlus/src/main/java
 /Users/jonathandesjardins/ClinicPlusBD/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/1150399716.index
+/clinicPlus/src/main/java
+/Users/jonathandesjardins/ClinicPlusBD/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/761705309.index
 /clinicPlus/src/main/java
 /Users/jonathandesjardins/ClinicPlusBD/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/2486930262.index
 /clinicPlus/src/main/java
-/Users/jonathandesjardins/ClinicPlusBD/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/649050738.index
-/clinicPlus/src/main/java
 /Users/jonathandesjardins/ClinicPlusBD/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/3146993845.index
+/clinicPlus/src/main/java
+/Users/jonathandesjardins/ClinicPlusBD/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/796917341.index
+/clinicPlus/src/main/java
+/Users/jonathandesjardins/ClinicPlusBD/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/1010918229.index
+/clinicPlus/src/main/java
+/Users/jonathandesjardins/ClinicPlusBD/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/2620149390.index
+/clinicPlus/src/main/java
+/Users/jonathandesjardins/ClinicPlusBD/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/649050738.index
 /clinicPlus/src/main/java

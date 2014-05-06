@@ -28,10 +28,46 @@ public class HomeController {
 		return "index";
 	}
 	
-	@RequestMapping(value = "/login", method = RequestMethod.GET)
-	   public String redirect() {
+	
+	//Login
+	@RequestMapping(value = "/redirectLogin", method = RequestMethod.GET)
+	public String redirectLogin() {
 	     
-	      return "redirect:/views/index2.jsp";
-	   }
+	    return "redirect:adminLogin";
+	}
+	   
+	@RequestMapping(value = "/adminLogin", method = RequestMethod.GET)
+	public String adminLogin() {
+	     
+	    return "admin/pages/connection/login";
+	}
+	
+	
+	//Admin
+	@RequestMapping(value = "/redirectAdmin", method = RequestMethod.POST)
+	public String redirectAdmin() {
+	     
+	    return "redirect:admin";
+	}
+	   
+	@RequestMapping(value = "/admin", method = RequestMethod.GET)
+	public String admin() {
+	     
+	    return "admin/admin";
+	}
+	
+	
+	//Calendar
+	@RequestMapping(value = "/redirectCalendar", method = RequestMethod.GET)
+	public String redirectCalendar() {
+	     
+	    return "redirect:calendar";
+	}
+	   
+	@RequestMapping(value = "/calendar", method = RequestMethod.GET)
+	public String calendar() {
+	     
+	    return "admin/pages/calendar";
+	}
 	
 }

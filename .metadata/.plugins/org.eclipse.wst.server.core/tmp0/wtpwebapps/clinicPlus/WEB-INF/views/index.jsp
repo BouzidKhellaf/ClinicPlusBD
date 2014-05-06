@@ -67,7 +67,7 @@
 							<h2 class="slogan">Bienvenue à ClinicPlus</h2>
 							<p>CliniquePlus vous permet de gérer vos rendez-vous.</p>
                             <br>
-                            <a href="<%request.getContextPath();%>/clinicplus/login.html"  
+                            <a href="<%request.getContextPath();%>/clinicplus/redirectLogin"  
                             	title="Admin"><i class="fa fa-user fa-5x mar-bot20 align-center"></i></a>
                             <p>Se connecter en tant qu'administrateur</p>
 						</div>

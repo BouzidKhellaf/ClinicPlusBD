@@ -5,7 +5,205 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2014-05-05T21:47:05Z</updated>
+  <updated>2014-05-06T15:11:36Z</updated>
+  <entry>
+    <title>Spring Tool Suite and Groovy/Grails Tool Suite 3.5.1 released</title>
+    <link rel="alternate" href="https://spring.io/blog/2014/05/06/spring-tool-suite-and-groovy-grails-tool-suite-3-5-1-released" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Martin Lippert</name>
+    </author>
+    <id>tag:spring.io,2014-05-06:1556</id>
+    <updated>2014-05-06T15:11:36Z</updated>
+    <content type="html">&lt;p&gt;Dear Spring Community,&lt;/p&gt;
+
+&lt;p&gt;we are happy to announce a minor maintenance release of our Eclipse-based tooling today: The Spring Tool Suite (STS) 3.5.1 and the Groovy/Grails Tool Suite (GGTS) 3.5.1.&lt;/p&gt;
+
+&lt;p&gt;This maintenance release includes a number of bug fixes as well as a few updates, including:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;added Java8 support for faceted web projects&lt;/li&gt;
+&lt;li&gt;updated Maven Integration for Eclipse to support Java8&lt;/li&gt;
+&lt;li&gt;m2e-egit connector now included by default&lt;/li&gt;
+&lt;li&gt;Grails updated to 2.3.8&lt;/li&gt;
+&lt;li&gt;the Groovy 2.3 compiler now availabe from the dashboard (including early support for Grails 2.4M2 in GGTS)&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;Both tool suites ship on top of the latest Eclipse Kepler SR2 release.&lt;/p&gt;
+
+&lt;p&gt;To download the distributions, please go visit:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Spring Tool Suite: &lt;a href="https://spring.io/tools/sts/all"&gt;https://spring.io/tools/sts/all&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;Groovy/Grails Tool Suite: &lt;a href="https://spring.io/tools/ggts/all"&gt;https://spring.io/tools/ggts/all&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;Detailed new and noteworthy notes can be found here: &lt;a href="http://docs.spring.io/sts/nan/v351/NewAndNoteworthy.html"&gt;STS/GGTS 3.5.1 New &amp;amp; Noteworthy&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The next version 3.6.0 is scheduled to arrive in July 2014, shortly after the Eclipse Luna (4.4) release.
+The first milestone build is scheduled to arrive in late May 2014.&lt;/p&gt;
+
+&lt;p&gt;Enjoy!&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Reactor 1.1.0.RELEASE now available</title>
+    <link rel="alternate" href="https://spring.io/blog/2014/05/06/reactor-1-1-0-release-now-available" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Jon Brisbin</name>
+    </author>
+    <id>tag:spring.io,2014-05-06:1555</id>
+    <updated>2014-05-06T15:02:13Z</updated>
+    <content type="html">&lt;p&gt;The Reactor team is pleased to announce that some significant updates to the Reactor framework are now available in the 1.1.0.RELEASE version of Reactor's flexible, asynchronous, fast data framework. This version includes numerous bug fixes and rewrites of key components to make them faster and, maybe more importantly, more efficient in terms of memory usage. Reactor 1.1 now includes the fantastic &lt;code&gt;gs-collections&lt;/code&gt; library from Goldman Sachs [1] which provides a very fluent API for dealing with maps and collections of all kinds.&lt;/p&gt;
+
+&lt;p&gt;Here is a non-exhaustive list of changes between Reactor 1.0 and 1.1:&lt;/p&gt;
+
+&lt;h4&gt;
+&lt;a name="user-content-stream--promise" class="anchor" href="#stream--promise"&gt;&lt;span class="octicon octicon-link"&gt;&lt;/span&gt;&lt;/a&gt;Stream / Promise&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Improved Stream and Promise value-handling&lt;/li&gt;
+&lt;li&gt;Additional composition methods like connect(), merge(), timeout(), window() and more&lt;/li&gt;
+&lt;li&gt;Many methods moved into Composable so shared between Stream and Promise&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;Some of the more useful additions to the Stream API over version 1.0 include the &lt;code&gt;Stream.window&lt;/code&gt; and &lt;code&gt;Stream.timeout&lt;/code&gt; methods. This allows you to collect values for a given period of time and pass them on down the processing chain. For example, to process whatever values have collected every 500ms, use a &lt;code&gt;window&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class="highlight highlight-java"&gt;&lt;pre&gt;&lt;span class="n"&gt;Deferred&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;Pojo&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Stream&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;Pojo&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Streams&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;defer&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;env&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+
+&lt;span class="c1"&gt;// add all collected values every half-second&lt;/span&gt;
+&lt;span class="n"&gt;in&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;compose&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt;
+  &lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;window&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;500&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+  &lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;consume&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;values&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;service&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;addAll&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;values&lt;/span&gt;&lt;span class="o"&gt;));&lt;/span&gt;
+
+&lt;span class="c1"&gt;// another service emits data into the `Deferred`&lt;/span&gt;
+&lt;span class="n"&gt;Pojo&lt;/span&gt; &lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;span class="k"&gt;while&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="kc"&gt;null&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;p&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;input&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;next&lt;/span&gt;&lt;span class="o"&gt;()))&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+  &lt;span class="n"&gt;in&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;accept&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+&lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4&gt;
+&lt;a name="user-content-utilities" class="anchor" href="#utilities"&gt;&lt;span class="octicon octicon-link"&gt;&lt;/span&gt;&lt;/a&gt;Utilities&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Robust HashWheelTimer implemenation based on a &lt;code&gt;RingBuffer&lt;/code&gt;
+&lt;/li&gt;
+&lt;li&gt;Allocator API for efficient object pooling&lt;/li&gt;
+&lt;li&gt;New Consumer Registry implementation based on &lt;code&gt;gs-collections&lt;/code&gt; 5.0 [1]&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;If you need to control memory usage in a more predictable way, Reactor includes an allocation API that can be backed by any specific implementation of pooling that you require. Reactor 1.1 comes with two implementations: a RingBuffer-based &lt;code&gt;Allocator&lt;/code&gt;, and a reference-counting &lt;code&gt;Allocator&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;The RingBuffer-based &lt;code&gt;Allocator&lt;/code&gt; can be configured to act very much like a standard Disruptor &lt;code&gt;RingBuffer&lt;/code&gt; with event handlers. But if all you need is to block the producer and use a slot-based allocation strategy, then it's very simple to use a RingBuffer for allocation:&lt;/p&gt;
+
+&lt;div class="highlight highlight-java"&gt;&lt;pre&gt;&lt;span class="n"&gt;Allocator&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;Event&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;Buffer&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;pool&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;RingBufferAllocatorSpec&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;Event&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;Buffer&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;()&lt;/span&gt;
+    &lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;ringSize&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;16&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="mi"&gt;1024&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+    &lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;allocator&lt;/span&gt;&lt;span class="o"&gt;(()&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;Event&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;Buffer&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;(&lt;/span&gt;&lt;span class="kc"&gt;null&lt;/span&gt;&lt;span class="o"&gt;))&lt;/span&gt;
+    &lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;waitStrategy&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;BusySpinWaitStrategy&lt;/span&gt;&lt;span class="o"&gt;())&lt;/span&gt;
+    &lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;get&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
+
+&lt;span class="c1"&gt;// in your code, maintain a `Reference` you can release&lt;/span&gt;
+&lt;span class="n"&gt;Reference&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;Event&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;Buffer&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;ref&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pool&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;allocate&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
+
+&lt;span class="c1"&gt;// pass your data POJO to other services&lt;/span&gt;
+&lt;span class="n"&gt;Event&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;Buffer&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;ev&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;ref&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;get&lt;/span&gt;&lt;span class="o"&gt;().&lt;/span&gt;&lt;span class="na"&gt;setData&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;buffer&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+&lt;span class="n"&gt;service&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;invoke&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ev&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+
+&lt;span class="c1"&gt;// when you're done, release the reference&lt;/span&gt;
+&lt;span class="n"&gt;ref&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;release&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4&gt;
+&lt;a name="user-content-logging" class="anchor" href="#logging"&gt;&lt;span class="octicon octicon-link"&gt;&lt;/span&gt;&lt;/a&gt;Logging&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Extremely efficient high-speed logging using Java Chronicle&lt;/li&gt;
+&lt;li&gt;Re-written Reactor-based async appender implementations&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;Logging can be very detrimental to an asynchronous application's performance--particularly one that uses technologies like a RingBuffer, which uses a single thread to support many tasks. If that thread gets blocked by one task doing IO writing a log entry, then that could potentially cascade back through the application and cause it to grind to a halt.&lt;/p&gt;
+
+&lt;p&gt;Reactor includes an efficient asynchronous &lt;code&gt;Appender&lt;/code&gt; implementation for Logback [2] which moves the actual appending onto a dedicated logging thread. This should help alleviate thread pressure caused by logging in most applications. But sometimes even that's not enough and a higher-throughput solution is needed. That's where Reactor's Java Chronicle-based &lt;code&gt;Appender&lt;/code&gt; comes in handy.&lt;/p&gt;
+
+&lt;p&gt;The Java Chronicle [3] is a high-speed messaging library that uses memory-mapped files for fast and efficient data persistence. Reactor integrates this with Logback by providing an &lt;code&gt;Appender&lt;/code&gt; that logs raw event data from your application but does not have to invoke downstream appenders. This means your logging event is stored in a &lt;code&gt;Chronicle&lt;/code&gt; but in its raw state. An additional utility is required to post-process a "durable" log file and either send those events to a "real" appender (like to a file or database) or to peek into the the &lt;code&gt;Chronicle&lt;/code&gt; and look for entries that match a given pattern. This is extremely useful in production situations where you don't care about logging if the application is functioning normally but if something goes wrong, you can easily extract the data from the &lt;code&gt;Chronicle&lt;/code&gt; into a standard log file for forensic analysis.&lt;/p&gt;
+
+&lt;p&gt;To configure a Reactor &lt;code&gt;DurableAsyncAppender&lt;/code&gt; to do high-speed logging, simply declare it in your Logback configuration. Here's an example of using it in a &lt;code&gt;logback.xml&lt;/code&gt; config:&lt;/p&gt;
+
+&lt;div class="highlight highlight-xml"&gt;&lt;pre&gt;  &lt;span class="nt"&gt;&amp;lt;appender&lt;/span&gt; &lt;span class="na"&gt;name=&lt;/span&gt;&lt;span class="s"&gt;"chronicle"&lt;/span&gt; &lt;span class="na"&gt;class=&lt;/span&gt;&lt;span class="s"&gt;"reactor.logback.DurableAsyncAppender"&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class="c"&gt;&amp;lt;!-- Uncomment to have log events also sent to a "normal" file appender --&amp;gt;&lt;/span&gt;
+    &lt;span class="c"&gt;&amp;lt;!--appender-ref ref="logfile"/--&amp;gt;&lt;/span&gt;
+    &lt;span class="nt"&gt;&amp;lt;basePath&amp;gt;&lt;/span&gt;log/&lt;span class="nt"&gt;&amp;lt;/basePath&amp;gt;&lt;/span&gt;
+    &lt;span class="nt"&gt;&amp;lt;backlog&amp;gt;&lt;/span&gt;2097152&lt;span class="nt"&gt;&amp;lt;/backlog&amp;gt;&lt;/span&gt;
+  &lt;span class="nt"&gt;&amp;lt;/appender&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;If something goes wrong, you can analyze the chronicle using the included utility by directing events extracted from the chronicle into the given "real" &lt;code&gt;Appender&lt;/code&gt;. This example invokes the log utility (the &lt;code&gt;reactor-logback.jar&lt;/code&gt; artifact must be on the classpath) and reads the durable log files from the &lt;code&gt;log/&lt;/code&gt; directory, reads in the Logback configuration from &lt;code&gt;logback.xml&lt;/code&gt; and then outputs all ERROR messages into the &lt;code&gt;logfile&lt;/code&gt; appender, which is defined in the &lt;code&gt;logback.xml&lt;/code&gt; config file.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;java reactor.logback.DurableLogUtility --path log/ --config logback.xml --output logfile --level ERROR
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4&gt;
+&lt;a name="user-content-groovy" class="anchor" href="#groovy"&gt;&lt;span class="octicon octicon-link"&gt;&lt;/span&gt;&lt;/a&gt;Groovy&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Better organization of Groovy support&lt;/li&gt;
+&lt;li&gt;AST-based extensions moved to their own subproject for better Gradle compatibility&lt;/li&gt;
+&lt;li&gt;Ready for Groovy 2.3 and Java 1.8&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;Groovy 2.3.0 &lt;a href="http://glaforge.appspot.com/article/groovy-2-3-0-is-out"&gt;has just been released&lt;/a&gt; and includes &lt;a href="http://groovy.codehaus.org/Groovy+2.3+release+notes?nc"&gt;a ton of new features and performance improvements&lt;/a&gt; as well as lambda closure support and other cool JDK 8 features. Reactor's Groovy support is ready for use in Groovy 2.3 while still be compatible with Groovy 2.2 on JDK 7.&lt;/p&gt;
+
+&lt;h4&gt;
+&lt;a name="user-content-networktcp" class="anchor" href="#networktcp"&gt;&lt;span class="octicon octicon-link"&gt;&lt;/span&gt;&lt;/a&gt;Network/TCP&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Renamed &lt;code&gt;reactor-tcp&lt;/code&gt; to &lt;code&gt;reactor-net&lt;/code&gt;
+&lt;/li&gt;
+&lt;li&gt;Refactored base abstractions to handle both TCP and UDP&lt;/li&gt;
+&lt;li&gt;Added UDP support using Netty&lt;/li&gt;
+&lt;li&gt;Added ZeroMQ support using &lt;code&gt;jeromq&lt;/code&gt;
+&lt;/li&gt;
+&lt;li&gt;Rewritten &lt;code&gt;reconnect&lt;/code&gt; support &lt;/li&gt;
+&lt;li&gt;Improved and exapanded testing&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;Improvements to the TCP module have been made which incorporate support for UDP as well as a new implementation based on ZeroMQ. [4]&lt;/p&gt;
+
+&lt;p&gt;The ZeroMQ support in Reactor features &lt;code&gt;tcp&lt;/code&gt; and &lt;code&gt;inproc&lt;/code&gt; support and provides a succinct fluent API for creating clients and servers very quickly using Reactor's effecient codec facility.&lt;/p&gt;
+
+&lt;div class="highlight highlight-java"&gt;&lt;pre&gt;&lt;span class="n"&gt;ZeroMQ&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;JsonData&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;zmq&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;ZeroMQ&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&amp;gt;(&lt;/span&gt;&lt;span class="n"&gt;reactorEnv&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+    &lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;codec&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;JacksonJsonCodec&lt;/span&gt;&lt;span class="o"&gt;());&lt;/span&gt;
+
+&lt;span class="n"&gt;zmq&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;router&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"inproc://queue"&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+   &lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;consume&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;channel&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;channel&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;consume&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nl"&gt;service:&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;invoke&lt;/span&gt;&lt;span class="o"&gt;));&lt;/span&gt;
+
+&lt;span class="n"&gt;zmq&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;dealer&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"inproc://queue"&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+   &lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;consume&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;channel&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+     &lt;span class="n"&gt;JsonData&lt;/span&gt; &lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+     &lt;span class="k"&gt;while&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="kc"&gt;null&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;next&lt;/span&gt;&lt;span class="o"&gt;()))&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+       &lt;span class="n"&gt;channel&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;sendAndForget&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+     &lt;span class="o"&gt;}&lt;/span&gt;
+   &lt;span class="o"&gt;});&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4&gt;
+&lt;a name="user-content-testing" class="anchor" href="#testing"&gt;&lt;span class="octicon octicon-link"&gt;&lt;/span&gt;&lt;/a&gt;Testing&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Numerous improvements to benchmarking&lt;/li&gt;
+&lt;li&gt;Added dedicated &lt;code&gt;reactor-benchmark&lt;/code&gt; project based on JMH [5]&lt;/li&gt;
+&lt;li&gt;Removed most benchmarking code from core project&lt;/li&gt;
+&lt;li&gt;Expanded and improved test coverage&lt;/li&gt;
+&lt;/ul&gt;&lt;h2&gt;
+&lt;a name="user-content-usage" class="anchor" href="#usage"&gt;&lt;span class="octicon octicon-link"&gt;&lt;/span&gt;&lt;/a&gt;Usage&lt;/h2&gt;
+
+&lt;p&gt;Artifacts are available in Maven Central and &lt;code&gt;repo.spring.io/libs-release&lt;/code&gt;. Please note that the coordinates for the Spring support have changed to &lt;code&gt;org.projectreactor.spring:reactor-spring-*&lt;/code&gt; in version 1.1 [6].&lt;/p&gt;
+
+&lt;p&gt;Reference documentation is available in the &lt;a href="https://github.com/reactor/reactor/wiki"&gt;GitHub wiki&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Updated API docs are on the &lt;a href="http://reactor.github.io/docs/api/"&gt;GitHub pages site&lt;/a&gt;.&lt;/p&gt;
+
+&lt;hr&gt;&lt;p&gt;[1] - &lt;a href="https://github.com/goldmansachs/gs-collections"&gt;https://github.com/goldmansachs/gs-collections&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[2] - &lt;a href="http://logback.qos.ch/"&gt;http://logback.qos.ch/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[3] - &lt;a href="https://github.com/OpenHFT/Java-Chronicle"&gt;https://github.com/OpenHFT/Java-Chronicle&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[4] - &lt;a href="http://zeromq.org/"&gt;http://zeromq.org/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[5] - &lt;a href="http://openjdk.java.net/projects/code-tools/jmh/"&gt;http://openjdk.java.net/projects/code-tools/jmh/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[6] - &lt;a href="http://repo.spring.io/libs-release/org/projectreactor/spring/"&gt;http://repo.spring.io/libs-release/org/projectreactor/spring/&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Spring Security 4.0.0.M1 Released</title>
     <link rel="alternate" href="https://spring.io/blog/2014/05/05/spring-security-4-0-0-m1-released" />
@@ -675,146 +873,6 @@ hand all that's going on and to provide direct feedback. Expect a number of sign
 &lt;p&gt;Tuesday, May 13, 2014 3:00 pm BST Time (London, UTC+1) &lt;a href="http://play.gopivotal.com/OSS_Webinar_SpringIntegration4.0TheNewFrontier7AM_Register.html"&gt;Register&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Tuesday, May 13, 2014 10:00 am Pacific Daylight Time (San Francisco, UTC-07:00) &lt;a href="http://play.gopivotal.com/OSS_Webinar_SpringIntegration4.0TheNewFrontier10AM_Register.html"&gt;Register&lt;/a&gt;&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Project Sagan: Upgrading to JDK 8</title>
-    <link rel="alternate" href="https://spring.io/blog/2014/04/18/project-sagan-upgrading-to-jdk-8" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Chris Beams</name>
-    </author>
-    <id>tag:spring.io,2014-04-18:1531</id>
-    <updated>2014-04-18T17:43:00Z</updated>
-    <content type="html">&lt;p&gt;As I'm sure most readers are aware, &lt;a href="http://www.oracle.com/events/us/en/java8/index.html"&gt;Java SE 8 was released last month&lt;/a&gt;. In conjunction with the &lt;a href="https://spring.io/blog/2014/04/02/spring-tool-suite-and-groovy-grails-tool-suite-3-5-0-released"&gt;recent release of STS 3.5.0&lt;/a&gt; and its complete support for JDK 8, we thought now would be an ideal time to upgrade Sagan to take advantage of the new language features and APIs.&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;Note&lt;/strong&gt;: Not yet familiar with the &lt;a href="https://github.com/spring-io/sagan"&gt;Sagan project&lt;/a&gt;? It's the Spring reference application that powers this blog and everything else at &lt;a href="http://spring.io"&gt;spring.io&lt;/a&gt;. Check out the &lt;a href="https://spring.io/blog/2014/03/27/project-sagan-open-sourcing-spring-io"&gt;first&lt;/a&gt; &lt;a href="https://spring.io/blog/2014/04/04/project-sagan-zero-downtime-deployments"&gt;three&lt;/a&gt; &lt;a href="https://spring.io/blog/2014/04/11/javascript-modularity-without-the-buzzwords"&gt;posts&lt;/a&gt; in this series for more details.&lt;/em&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Cloud Foundry's &lt;a href="https://github.com/cloudfoundry/java-buildpack"&gt;Java buildpack&lt;/a&gt; has provided support for JDK 8 since the day it was released. To begin using it, we've &lt;a href="https://github.com/spring-io/java-buildpack"&gt;created our own fork&lt;/a&gt; of the buildpack, &lt;a href="https://github.com/spring-io/java-buildpack/commit/340c15363babd62ade352ff379c5e3dc36c933d2"&gt;bumped the JDK version &lt;/a&gt; from 1.7.0 to 1.8.0, and &lt;a href="https://github.com/spring-io/sagan/commit/fcdba9b894a4b9715eab14e3cb7de95af45ae6c0"&gt;configured our Gradle build&lt;/a&gt; to use our fork when deploying Sagan to production.&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;Note&lt;/strong&gt;: At some point in the near future, 1.8.0 will become the default version for the Cloud Foundry build pack, and the forking described will no longer be necessary.&lt;/em&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;As you may have noticed, &lt;a href="https://travis-ci.org/spring-io/sagan"&gt;Sagan uses Travis CI&lt;/a&gt; for continuous integration and deployment, and &lt;a href="https://github.com/spring-io/sagan/commit/0c617b2b05d18a54a6a85784032c266cc8449185#diff-0"&gt;updating our Travis configuration&lt;/a&gt; to use JDK 8 was extremely simple.&lt;/p&gt;
-
-&lt;p&gt;Of course the most interesting aspect of the upgrade is the changes to the code inself. Take a look through the commits in &lt;a href="https://github.com/spring-io/sagan/pull/348"&gt;pull request #348&lt;/a&gt;, where you'll see changes broken up into several categories, including refactoring to use lambda expressions and taking advantage of JDK 8's powerful new Stream API.&lt;/p&gt;
-
-&lt;p&gt;For &lt;a href="https://github.com/spring-io/sagan/commit/09aa380061e7729522d6d4d006f3829dece0ce62#diff-1dc1df79f7f4999479abd8b7c374309aL46"&gt;one very simple example&lt;/a&gt;, it's great to go from code like this:&lt;/p&gt;
-
-&lt;div class="highlight highlight-java"&gt;&lt;pre&gt;&lt;span class="n"&gt;List&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;projectVersions&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;ArrayList&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&amp;gt;();&lt;/span&gt;
-&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ProjectRelease&lt;/span&gt; &lt;span class="n"&gt;projectRelease&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;project&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;getProjectReleases&lt;/span&gt;&lt;span class="o"&gt;())&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
-    &lt;span class="n"&gt;projectVersions&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;add&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;projectRelease&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;getVersion&lt;/span&gt;&lt;span class="o"&gt;());&lt;/span&gt;
-&lt;span class="o"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;to this:&lt;/p&gt;
-
-&lt;div class="highlight highlight-java"&gt;&lt;pre&gt;&lt;span class="n"&gt;List&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;projectVersions&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;project&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;getProjectReleases&lt;/span&gt;&lt;span class="o"&gt;().&lt;/span&gt;&lt;span class="na"&gt;stream&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt;
-    &lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;map&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nl"&gt;ProjectRelease:&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;getVersion&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
-    &lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;collect&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Collectors&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;toList&lt;/span&gt;&lt;span class="o"&gt;());&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Or, in &lt;a href="https://github.com/spring-io/sagan/commit/3718f646d31651fb50d9d12fb3d5bc2151e320d5#diff-b1f47aff8c17f1c697e3ebc6c5c9505dR82"&gt;unit tests&lt;/a&gt;, from the ceremony-laden:&lt;/p&gt;
-
-&lt;div class="highlight highlight-java"&gt;&lt;pre&gt;&lt;span class="n"&gt;mockMvc&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;perform&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;createPostRequest&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
-    &lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;andExpect&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;ResultMatcher&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
-        &lt;span class="nd"&gt;@Override&lt;/span&gt;
-        &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;match&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;MvcResult&lt;/span&gt; &lt;span class="n"&gt;result&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
-            &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;redirectedUrl&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;result&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;getResponse&lt;/span&gt;&lt;span class="o"&gt;().&lt;/span&gt;&lt;span class="na"&gt;getRedirectedUrl&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
-            &lt;span class="n"&gt;assertThat&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;redirectedUrl&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;startsWith&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"/admin/blog"&lt;/span&gt;&lt;span class="o"&gt;));&lt;/span&gt;
-        &lt;span class="o"&gt;}&lt;/span&gt;
-    &lt;span class="o"&gt;});&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;to the tight and readable:&lt;/p&gt;
-
-&lt;div class="highlight highlight-java"&gt;&lt;pre&gt;&lt;span class="n"&gt;mockMvc&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;perform&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;createPostRequest&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
-    &lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;andExpect&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
-        &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;redirectedUrl&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;result&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;getResponse&lt;/span&gt;&lt;span class="o"&gt;().&lt;/span&gt;&lt;span class="na"&gt;getRedirectedUrl&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
-        &lt;span class="n"&gt;assertThat&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;redirectedUrl&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;startsWith&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"/admin/blog"&lt;/span&gt;&lt;span class="o"&gt;));&lt;/span&gt;
-    &lt;span class="o"&gt;});&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Of course, what you see above only scratches the surface of what's possible with streams, lambda expressions and method references in JDK 8. There are a few new concepts to learn, but you'll be glad you did! To do so, we recommend reading Venkat Subramanian's excellent &lt;a href="http://pragprog.com/book/vsjava8/functional-programming-in-java"&gt;Functional Programming in Java&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;There are additional changes we can make to take full advantage of what JDK 8 has to offer, and among them is converting our uses of &lt;code&gt;java.util.Date&lt;/code&gt;, &lt;code&gt;java.util.Calendar&lt;/code&gt; and &lt;code&gt;java.util.TimeZone&lt;/code&gt; to JDK 8's new &lt;a href="http://www.oracle.com/technetwork/articles/java/jf14-date-time-2125367.html"&gt;Date and Time API&lt;/a&gt;. We've created &lt;a href="https://github.com/spring-io/sagan/issues/360"&gt;issue #360&lt;/a&gt; to do just that, and if you're interested in helping make it happen, we'd love to work with you on a pull request. Just take a look at the &lt;a href="https://github.com/spring-io/sagan/blob/master/CONTRIBUTING.md"&gt;contributor guidelines&lt;/a&gt;, and let us know you're interested in a comment on that issue.&lt;/p&gt;
-
-&lt;p&gt;In any case, if you've been curious to check out and play with the new features and APIs in JDK 8, we hope you'll find these changes to the Sagan app a useful reference.&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;Note:&lt;/strong&gt; if you already have the Sagan repository checked out locally, you'll need to re-generate your IDE project metadata to ensure you're working properly against 1.8-level language features. The &lt;a href="https://github.com/spring-io/sagan/wiki"&gt;project wiki has been updated&lt;/a&gt; to reflect the correct requirements and steps for doing this.&lt;/em&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Also, for a more general overview of what's available at both the language and API level in JDK 8, be sure to check Benjamin Winterberg's excellent &lt;a href="http://winterbe.com/posts/2014/03/16/java-8-tutorial/"&gt;Java 8 Tutorial&lt;/a&gt; and &lt;a href="http://winterbe.com/posts/2014/03/29/jdk8-api-explorer/"&gt;Java SE 8 API Explorer&lt;/a&gt;.&lt;/p&gt;
-
-&lt;hr&gt;&lt;h3&gt;
-&lt;a name="user-content-springone-2gx-2014-is-around-the-corner" class="anchor" href="#springone-2gx-2014-is-around-the-corner"&gt;&lt;span class="octicon octicon-link"&gt;&lt;/span&gt;&lt;/a&gt;SpringOne 2GX 2014 is around the corner&lt;/h3&gt;
-
-&lt;p&gt;This year's &lt;a href="http://www.springone2gx.com"&gt;SpringOne will be in Dallas, TX&lt;/a&gt; on September 8-11 and &lt;a href="https://2014.event.springone2gx.com/register"&gt;super early bird registration is now open&lt;/a&gt;. We hope to see you there!&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Security OAuth 2.0.0.RC1 Available</title>
-    <link rel="alternate" href="https://spring.io/blog/2014/04/18/spring-security-oauth-2-0-0-rc1-available" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Dave Syer</name>
-    </author>
-    <id>tag:spring.io,2014-04-18:1530</id>
-    <updated>2014-04-18T12:18:00Z</updated>
-    <content type="html">&lt;p&gt;&lt;a href="https://github.com/spring-projects/spring-security-oauth"&gt;Spring Security OAuth&lt;/a&gt; 2.0.0.RC1 is available now from the &lt;a href="http://repo.spring.io"&gt;Spring Repo&lt;/a&gt;. This is a huge step in the direction of modernisation and ease of use for OAuth server and client apps on Spring.&lt;/p&gt;
-
-&lt;p&gt;The headline feature is support for &lt;code&gt;@Configuration&lt;/code&gt;(for OAuth2 only) and if you use Spring Boot to write your app you can serve tokens and protect the API resources in about 25 lines of code:&lt;/p&gt;
-
-&lt;div class="highlight highlight-java"&gt;&lt;pre&gt;&lt;span class="nd"&gt;@Configuration&lt;/span&gt;
-&lt;span class="nd"&gt;@EnableAutoConfiguration&lt;/span&gt;
-&lt;span class="nd"&gt;@EnableResourceServer&lt;/span&gt;
-&lt;span class="nd"&gt;@RestController&lt;/span&gt;
-&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Application&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
-
-    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
-        &lt;span class="n"&gt;SpringApplication&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;run&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Application&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;class&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
-    &lt;span class="o"&gt;}&lt;/span&gt;
-
-    &lt;span class="nd"&gt;@RequestMapping&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"/"&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
-    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="nf"&gt;home&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
-        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="s"&gt;"Hello World"&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
-    &lt;span class="o"&gt;}&lt;/span&gt;
-
-    &lt;span class="nd"&gt;@Configuration&lt;/span&gt;
-    &lt;span class="nd"&gt;@EnableAuthorizationServer&lt;/span&gt;
-    &lt;span class="kd"&gt;protected&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;OAuth2Config&lt;/span&gt; &lt;span class="kd"&gt;extends&lt;/span&gt; &lt;span class="n"&gt;AuthorizationServerConfigurerAdapter&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
-
-        &lt;span class="nd"&gt;@Autowired&lt;/span&gt;
-        &lt;span class="kd"&gt;private&lt;/span&gt; &lt;span class="n"&gt;AuthenticationManager&lt;/span&gt; &lt;span class="n"&gt;authenticationManager&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
-
-        &lt;span class="nd"&gt;@Override&lt;/span&gt;
-        &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;configure&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;AuthorizationServerEndpointsConfigurer&lt;/span&gt; &lt;span class="n"&gt;endpoints&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="kd"&gt;throws&lt;/span&gt; &lt;span class="n"&gt;Exception&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
-            &lt;span class="n"&gt;endpoints&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;authenticationManager&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;authenticationManager&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
-        &lt;span class="o"&gt;}&lt;/span&gt;
-
-        &lt;span class="nd"&gt;@Override&lt;/span&gt;
-        &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;configure&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ClientDetailsServiceConfigurer&lt;/span&gt; &lt;span class="n"&gt;clients&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="kd"&gt;throws&lt;/span&gt; &lt;span class="n"&gt;Exception&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
-            &lt;span class="n"&gt;clients&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;inMemory&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt;
-                &lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;withClient&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"my-trusted-client"&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
-                    &lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;authorizedGrantTypes&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"password"&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="s"&gt;"authorization_code"&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="s"&gt;"refresh_token"&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
-                    &lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;authorities&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"ROLE_CLIENT"&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="s"&gt;"ROLE_TRUSTED_CLIENT"&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
-                    &lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;scopes&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"read"&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="s"&gt;"write"&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="s"&gt;"trust"&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
-                    &lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;resourceIds&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"oauth2-resource"&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
-                    &lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;secret&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"secret"&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
-        &lt;span class="o"&gt;}&lt;/span&gt;
-
-    &lt;span class="o"&gt;}&lt;/span&gt;
-
-&lt;span class="o"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;We now support JSON Web Token (JWT) tokens out of the box, and also there is an explicit Approvals domain for managing and persisting user approvals. These features draw heavily on the &lt;a href="https://github.com/cloudfoundry/uaa"&gt;CloudFoundry UAA&lt;/a&gt; work.&lt;/p&gt;
-
-&lt;p&gt;The Authorization Server APIs have been refactored a lot to enable new use cases to be easily added: for example OpenID Connect (OIDC), MAC tokens, or the new Token Revocation standard are easy to add. I know of at least one OIDC implementation that use Spring OAuth2 2.0 already.&lt;/p&gt;
-
-&lt;p&gt;There are plenty of people to thank for their help in this work, but our own Rob Winch deserves a big shout out for getting the ball rolling with the &lt;code&gt;@Configuration&lt;/code&gt; work. During the work on 2.0 we moved everything including issue tracking to github, and I think the result has been more community engagement, so many of the contributors this time are directly from people using the software, which is great. Thanks to everyone who helped!&lt;/p&gt;</content>
   </entry>
 </feed>
 

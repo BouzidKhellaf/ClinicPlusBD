@@ -1,6 +1,7 @@
 package com.ogtime.clinicplus.entities;
 
 import java.io.Serializable;
+import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -8,6 +9,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
 
@@ -17,14 +19,15 @@ public class Rendezvous implements Serializable{
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long idRendezvous;
+	private Date dateRendezvous;
 	
 	@ManyToOne
 	@JoinColumn(name="idClinique")
 	private Clinique clinique;
-	
+	@OneToOne
 	@JoinColumn(name="idMedecin")
 	private Medecin medecin;
-	
+	@OneToOne
 	@JoinColumn(name="idPatient")
 	private Patient patient;
 	public Rendezvous() {
@@ -59,6 +62,12 @@ public class Rendezvous implements Serializable{
 	}
 	public void setMedecin(Medecin medecin) {
 		this.medecin = medecin;
+	}
+	public Date getDateRendezvous() {
+		return dateRendezvous;
+	}
+	public void setDateRendezvous(Date dateRendezvous) {
+		this.dateRendezvous = dateRendezvous;
 	}
 	
 	

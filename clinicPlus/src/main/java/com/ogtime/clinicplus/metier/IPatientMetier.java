@@ -27,4 +27,3 @@ public interface IPatientMetier {
 	public Long ajouterClinique(Clinique clinique);
 
 }
-

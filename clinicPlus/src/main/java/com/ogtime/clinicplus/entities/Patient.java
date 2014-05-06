@@ -63,6 +63,24 @@ public class Patient implements Serializable{
 		// TODO Auto-generated constructor stub
 	}
 	
+	
+	
+	public Patient(String nAssurMaladie, String nomUtilisateur,
+			String motDePasse, String nom, String prenom, String adresse,
+			String telephone, String courriel) {
+		super();
+		NAssurMaladie = nAssurMaladie;
+		this.nomUtilisateur = nomUtilisateur;
+		this.motDePasse = motDePasse;
+		this.nom = nom;
+		this.prenom = prenom;
+		this.adresse = adresse;
+		this.telephone = telephone;
+		this.courriel = courriel;
+	}
+
+
+
 	public Long getIdPatient() {
 		return idPatient;
 	}

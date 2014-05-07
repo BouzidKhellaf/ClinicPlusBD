@@ -1,0 +1,49 @@
+package com.ogtime.clinicplus.metier.implement;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.ogtime.clinicplus.dao.IMedecinDAO;
+import com.ogtime.clinicplus.metier.IMedecinMetier;
+
+@Service
+@Transactional
+public class MedecinMetierImpl implements IMedecinMetier{
+	
+	@Autowired
+	private IMedecinDAO iMedecinDAO;
+
+	@Override
+	public void ajouterMedecin(com.ogtime.clinicplus.entities.Medecin medecin) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void modifierMedecin() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public com.ogtime.clinicplus.entities.Medecin getMedecin(long idMedecin) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void Medecin(long idMedecin) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<com.ogtime.clinicplus.entities.Medecin> getMedecin() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

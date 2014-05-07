@@ -70,3 +70,15 @@
 1399409464645	Rename type 'PatientMetier'
 1399409472168	Rename type 'RendezvousMetier'
 1399411682648	Delete element
+1399414494476	Delete element
+1399414536005	Delete element
+1399415757770	Infer generic type arguments
+1399428717683	Rename type 'AdminMetierImpl'
+1399428726263	Rename type 'CliniqueMetierImpl'
+1399428734731	Rename type 'ConsultationMetierImpl'
+1399428742724	Rename type 'DossierMetierImpl'
+1399428750802	Rename type 'HoraireMetierImpl'
+1399428757182	Rename type 'LigneConsultationMetierImpl'
+1399428763286	Rename type 'MedecinMetierImpl'
+1399428772931	Rename type 'PatientMetierImpl'
+1399428779927	Rename type 'RendezvousMetierImpl'

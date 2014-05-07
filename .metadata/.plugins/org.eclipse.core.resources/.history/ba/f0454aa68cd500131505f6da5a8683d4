@@ -1,0 +1,8 @@
+package com.ogtime.clinicplus.controler;
+
+
+@Controller
+@RequestMapping(value="/admin")
+public class AdminController {
+
+}

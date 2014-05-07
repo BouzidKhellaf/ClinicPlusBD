@@ -1,0 +1,39 @@
+package com.ogtime.clinicplus.dao.implement;
+
+import java.util.List;
+
+import com.ogtime.clinicplus.dao.ICliniqueDAO;
+
+public class CliniqueDAOImpl implements ICliniqueDAO{
+
+	@Override
+	public void ajouterClinique(com.ogtime.clinicplus.entities.Clinique clinique) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void modifierAdmin() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public com.ogtime.clinicplus.entities.Clinique Clinique(long idClinique) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void supprimerClinique(long idClinique) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<com.ogtime.clinicplus.entities.Clinique> getClinique() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

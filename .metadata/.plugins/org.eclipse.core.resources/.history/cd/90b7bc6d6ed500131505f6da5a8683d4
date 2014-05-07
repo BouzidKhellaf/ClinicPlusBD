@@ -1,0 +1,46 @@
+package com.ogtime.clinicplus.dao.implement;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+
+import com.ogtime.clinicplus.dao.IAdminDAO;
+import com.ogtime.clinicplus.entities.Admin;
+import com.ogtime.clinicplus.entities.Patient;
+
+
+public class AdminDAOImpl implements IAdminDAO{
+	
+	@PersistenceContext
+	private EntityManager em;
+
+	@Override
+	public void ajouterAdmin(Admin admin) {
+		em.persist(admin);	
+	}
+
+	@Override
+	public void modifierAdmin() {
+		em.merge(getAdmin());
+		
+	}
+
+	@Override
+	public Admin getAdmin(long idAdmin) {
+		return em.find(Admin.class, idAdmin);
+	}
+
+	@Override
+	public void supprimerAdmin(long idAdmin) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<Admin> getAdmin() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

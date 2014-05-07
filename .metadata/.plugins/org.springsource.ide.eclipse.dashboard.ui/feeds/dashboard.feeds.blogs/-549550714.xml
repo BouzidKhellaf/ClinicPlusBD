@@ -205,6 +205,25 @@ The first milestone build is scheduled to arrive in late May 2014.&lt;/p&gt;
 &lt;p&gt;[6] - &lt;a href="http://repo.spring.io/libs-release/org/projectreactor/spring/"&gt;http://repo.spring.io/libs-release/org/projectreactor/spring/&lt;/a&gt;&lt;/p&gt;</content>
   </entry>
   <entry>
+    <title>SpringOne2GX 2013 Replay: Extending Cloud Foundry with Custom Integration</title>
+    <link rel="alternate" href="https://spring.io/blog/2014/05/06/springone2gx-2013-replay-extending-cloud-foundry-with-custom-integration" />
+    <category term="news" label="News and Events" />
+    <author>
+      <name>Pieter Humphrey</name>
+    </author>
+    <id>tag:spring.io,2014-05-06:1558</id>
+    <updated>2014-05-06T15:01:00Z</updated>
+    <content type="html">&lt;p&gt;Recorded at SpringOne2GX 2013 in Santa Clara, CA. &lt;/p&gt;
+
+&lt;p&gt;Speakers: Cornelia Davis, Scott Frederick&lt;/p&gt;
+
+&lt;p&gt; As you find it in the open-source codebase, Cloud Foundry includes a set of prepackaged services (Postgres, MySQL, Redis, MongoDB and RabbitMQ) and a number of application runtimes (Java, Ruby and Node.js). In addition, CloudFoundry.com integrates with a number of external service providers through a services gateway. When you are deploying your own Cloud Foundry you can extend the existing open-source features by adding additional services and runtime support. In fact, you can bring your own runtime to any Cloud Foundry (including CloudFoundry.com) via buildpacks. In this session we will show you how to build and deploy, or broker custom services. We will also introduce you to buildpacks, show you how to create your own, and how to get your apps to use them. &lt;/p&gt;
+
+&lt;p&gt;Learn more about using CloudFoundry at: &lt;a href="http://www.cloudfoundry.com/use"&gt;http://www.cloudfoundry.com/use&lt;/a&gt;&lt;/p&gt;
+
+&lt;iframe width="560" height="315" src="//www.youtube.com/embed/sOvQE8BrX-E" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</content>
+  </entry>
+  <entry>
     <title>SpringOne2GX 2013 Replay: Building Spring Applications on Cloud Foundry</title>
     <link rel="alternate" href="https://spring.io/blog/2014/05/06/springone2gx-2013-replay-building-spring-applications-on-cloud-foundry" />
     <category term="news" label="News and Events" />
@@ -858,23 +877,6 @@ hand all that's going on and to provide direct feedback. Expect a number of sign
 &lt;p&gt;Learn more about Spring Data and Elasticsearch at: &lt;a href="http://projects.spring.io/spring-data"&gt;http://projects.spring.io/spring-data&lt;/a&gt;&lt;/p&gt;
 
 &lt;iframe width="560" height="315" src="//www.youtube.com/embed/G56aE1kiOZw" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</content>
-  </entry>
-  <entry>
-    <title>Webinar: Data-Driven Applications with Spring and Neo4j</title>
-    <link rel="alternate" href="https://spring.io/blog/2014/04/22/webinar-data-driven-applications-with-spring-and-neo4j" />
-    <category term="news" label="News and Events" />
-    <author>
-      <name>Pieter Humphrey</name>
-    </author>
-    <id>tag:spring.io,2014-04-22:1533</id>
-    <updated>2014-04-22T10:35:00Z</updated>
-    <content type="html">&lt;p&gt;Speakers: Michael Hunger (Neo Technology) and Josh Long (Pivotal)&lt;/p&gt;
-
-&lt;p&gt;Spring Data Neo4j 3.0 is here and it supports Neo4j 2.0. Neo4j is a tiny graph database with a big punch. Graph databases are imminently suited to asking interesting questions, and doing analysis. Want to load the Facebook friend graph? Build a recommendation engine? Neo4j's just the ticket. Join Spring Data Neo4j lead Michael Hunger (@mesirii) and Spring Developer Advocate Josh Long (@starbuxman) for a look at how to build smart, graph-driven applications with Spring Data Neo4j and Spring Boot.&lt;/p&gt;
-
-&lt;p&gt;Tuesday, May 20, 2014 3:00 pm BST Time (London, UTC+1) &lt;a href="http://play.gopivotal.com/OSS_Webinar_Neo4JTechnology7AM_Register.html"&gt;Register&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Tuesday, May 20, 2014 10:00 am Pacific Daylight Time (San Francisco, UTC-07:00) &lt;a href="http://play.gopivotal.com/OSS_Webinar_Neo4JTechnology10AM_Register.html"&gt;Register&lt;/a&gt;&lt;/p&gt;</content>
   </entry>
 </feed>
 

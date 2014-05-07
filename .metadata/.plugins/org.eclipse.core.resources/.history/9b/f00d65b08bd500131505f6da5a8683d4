@@ -1,0 +1,45 @@
+package com.ogtime.clinicplus.metier.implement;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.ogtime.clinicplus.entities.Rendezvous;
+import com.ogtime.clinicplus.metier.IRendezvousMetier;
+
+@Service
+@Transactional
+public class RendezvousMetierImpl implements IRendezvousMetier{
+
+	@Override
+	public void ajouterRendezvous(Rendezvous rendezvous) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void modifierRendezvous() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Rendezvous getRendezvous(long idRendezvous) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void supprimerRendezvous(long idRendezvous) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<Rendezvous> getRendezvous() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

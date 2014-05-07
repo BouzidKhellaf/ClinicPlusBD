@@ -7,6 +7,8 @@ import javax.persistence.Query;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
+import org.springframework.stereotype.Repository;
+
 import com.ogtime.clinicplus.dao.IPatientDAO;
 import com.ogtime.clinicplus.entities.Clinique;
 import com.ogtime.clinicplus.entities.Horaire;
@@ -14,22 +16,25 @@ import com.ogtime.clinicplus.entities.Medecin;
 import com.ogtime.clinicplus.entities.Patient;
 import com.ogtime.clinicplus.entities.Rendezvous;
 
+@Repository
 public class PatientDAOImpl implements IPatientDAO {
 
 	@PersistenceContext
 	private EntityManager em;
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public List<Patient> listPatients() {
 
-		Query req = em.createQuery("select p from Patient p");
+		Query req = em.createQuery("select p from Patients p");
 		return req.getResultList();
 
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public List<Patient> patientsParMotCle(String mc) {
-		Query req = em.createQuery("select p from Patient p where p.nom like:x or p.telephone like:x");
+		Query req = em.createQuery("select p from Patients p where p.nom like:x or p.telephone like:x");
 		req.setParameter("x", "%" + mc + "%");
 		return req.getResultList();
 	}
@@ -43,7 +48,6 @@ public class PatientDAOImpl implements IPatientDAO {
 	public void supprimerPatient(Long idPatient) {
 		Patient p=em.find(Patient.class, idPatient);
 		em.remove(p);
-
 	}
 
 	@Override
@@ -55,19 +59,20 @@ public class PatientDAOImpl implements IPatientDAO {
 	public Long ajouterPatient(Patient patient) {
 		em.persist(patient);
 		return patient.getIdPatient();
-
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public List<Medecin> medecinParMotCle(String mc) {
-		Query req = em.createQuery("select m from Medecin m where m.specialite like:x or  m.nom like:x");
+		Query req = em.createQuery("select m from Medecins m where m.specialite like:x or  m.nom like:x");
 		req.setParameter("x", "%" + mc + "%");
 		return req.getResultList();
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public List<Horaire> getHoraireMedecin(Long idMedecin) {
-		Query req=em.createQuery("select h from Horaire h where	h.medecin.idMedecin=:x");
+		Query req=em.createQuery("select h from Horaires h where h.medecin.idMedecin=:x");
 				req.setParameter("x", idMedecin);
 				return req.getResultList();
 	}
@@ -81,9 +86,9 @@ public class PatientDAOImpl implements IPatientDAO {
 		rd.setDateRendezvous(dateRendezvous);
 		
 		em.persist(rd);
-
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public List<Clinique> listCliniques() {
 		Query req = em.createQuery("select c from Clinique c");

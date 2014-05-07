@@ -10,12 +10,12 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.validation.constraints.Size;
 
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotEmpty;
 
-@SuppressWarnings("serial")
 @Entity
 public class Medecin implements Serializable{
 	
@@ -162,4 +162,6 @@ public class Medecin implements Serializable{
 		this.clinique = clinique;
 	}
 	
+	
+
 }

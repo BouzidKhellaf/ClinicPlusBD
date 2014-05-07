@@ -11,7 +11,6 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
-@SuppressWarnings("serial")
 @Entity
 public class Consultation implements Serializable{
 	
@@ -62,4 +61,7 @@ public class Consultation implements Serializable{
 		this.ligneConsultation = ligneConsultation;
 	}
 	
+	
+	
+
 }

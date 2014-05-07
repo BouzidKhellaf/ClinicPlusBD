@@ -12,7 +12,6 @@ import javax.persistence.ManyToOne;
 
 import org.hibernate.validator.constraints.NotEmpty;
 
-@SuppressWarnings("serial")
 @Entity
 public class LigneConsultation implements Serializable{
 	
@@ -75,4 +74,6 @@ public class LigneConsultation implements Serializable{
 		this.note = note;
 	}
 	
+	
+
 }

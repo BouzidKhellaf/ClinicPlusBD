@@ -12,7 +12,6 @@ import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.NotEmpty;
 
-@SuppressWarnings("serial")
 @Entity
 public class Clinique implements Serializable{
 	
@@ -49,6 +48,7 @@ public class Clinique implements Serializable{
 	private Collection<Medecin>medecins;
 	@OneToMany(mappedBy="clinique")
 	private Collection<Rendezvous>rendezvous;
+	
 	
 	
 	
@@ -167,4 +167,8 @@ public class Clinique implements Serializable{
 		this.medecins = medecins;
 	}
 	
+
+
+	
+
 }

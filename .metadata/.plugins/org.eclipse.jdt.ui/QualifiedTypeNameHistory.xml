@@ -1,2 +1,47 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.ogtime.clinicplus.entities.Admin"/>
+<fullyQualifiedTypeName name="antlr.collections.List"/>
+<fullyQualifiedTypeName name="org.hibernate.mapping.List"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="com.ogtime.clinicplus.entities.Rendezvous"/>
+<fullyQualifiedTypeName name="com.ogtime.clinicplus.entities.LigneConsultation"/>
+<fullyQualifiedTypeName name="com.ogtime.clinicplus.entities.Horaire"/>
+<fullyQualifiedTypeName name="com.ogtime.clinicplus.entities.Dossier"/>
+<fullyQualifiedTypeName name="com.ogtime.clinicplus.entities.Consultation"/>
+<fullyQualifiedTypeName name="com.ogtime.clinicplus.entities.Clinique"/>
+<fullyQualifiedTypeName name="com.ogtime.clinicplus.metier.IAdminMetier"/>
+<fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
+<fullyQualifiedTypeName name="org.springframework.transaction.annotation.Transactional"/>
+<fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
+<fullyQualifiedTypeName name="com.ogtime.clinicplus.dao.IAdminDAO"/>
+<fullyQualifiedTypeName name="com.ogtime.clinicplus.metier.ICliniqueMetier"/>
+<fullyQualifiedTypeName name="com.ogtime.clinicplus.dao.ICliniqueDAO"/>
+<fullyQualifiedTypeName name="com.ogtime.clinicplus.metier.IConsultationMetier"/>
+<fullyQualifiedTypeName name="com.ogtime.clinicplus.dao.IConsultationDAO"/>
+<fullyQualifiedTypeName name="com.ogtime.clinicplus.metier.IDossierMetier"/>
+<fullyQualifiedTypeName name="com.ogtime.clinicplus.dao.IDossierDAO"/>
+<fullyQualifiedTypeName name="com.ogtime.clinicplus.metier.IHoraireMetier"/>
+<fullyQualifiedTypeName name="com.ogtime.clinicplus.dao.IHoraireDAO"/>
+<fullyQualifiedTypeName name="com.ogtime.clinicplus.metier.ILigneConsultationMetier"/>
+<fullyQualifiedTypeName name="com.ogtime.clinicplus.dao.ILigneConsultationDAO"/>
+<fullyQualifiedTypeName name="com.ogtime.clinicplus.metier.IMedecinMetier"/>
+<fullyQualifiedTypeName name="com.ogtime.clinicplus.dao.IMedecinDAO"/>
+<fullyQualifiedTypeName name="com.ogtime.clinicplus.entities.Medecin"/>
+<fullyQualifiedTypeName name="com.ogtime.clinicplus.metier.IRendezvousMetier"/>
+<fullyQualifiedTypeName name="com.ogtime.clinicplus.dao.IRendezvousDAO"/>
+<fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+<fullyQualifiedTypeName name="com.ogtime.clinicplus.metier.implement.AdminMetier"/>
+<fullyQualifiedTypeName name="org.springframework.web.servlet.ModelAndView"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMethod"/>
+<fullyQualifiedTypeName name="com.ogtime.clinicplus.metier.implement.CliniqueMetier"/>
+<fullyQualifiedTypeName name="com.ogtime.clinicplus.metier.implement.ConsultationMetier"/>
+<fullyQualifiedTypeName name="com.ogtime.clinicplus.metier.implement.DossierMetier"/>
+<fullyQualifiedTypeName name="com.ogtime.clinicplus.metier.implement.HoraireMetier"/>
+<fullyQualifiedTypeName name="com.ogtime.clinicplus.metier.implement.LigneConsultationMetier"/>
+<fullyQualifiedTypeName name="com.ogtime.clinicplus.metier.implement.MedecinMetier"/>
+<fullyQualifiedTypeName name="com.ogtime.clinicplus.metier.implement.PatientMetier"/>
+<fullyQualifiedTypeName name="com.ogtime.clinicplus.metier.implement.RendezvousMetier"/>
+</qualifiedTypeNameHistroy>

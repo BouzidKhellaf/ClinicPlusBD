@@ -15,7 +15,6 @@ import javax.validation.constraints.Size;
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotEmpty;
 
-@SuppressWarnings("serial")
 @Entity
 public class Admin implements Serializable{
 	
@@ -150,5 +149,7 @@ public class Admin implements Serializable{
 	public void setClinique(Clinique clinique) {
 		this.clinique = clinique;
 	}
+	
+	
 	
 }

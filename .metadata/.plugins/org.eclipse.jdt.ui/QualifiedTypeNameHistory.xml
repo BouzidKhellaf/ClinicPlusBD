@@ -44,4 +44,5 @@
 <fullyQualifiedTypeName name="com.ogtime.clinicplus.metier.implement.MedecinMetier"/>
 <fullyQualifiedTypeName name="com.ogtime.clinicplus.metier.implement.PatientMetier"/>
 <fullyQualifiedTypeName name="com.ogtime.clinicplus.metier.implement.RendezvousMetier"/>
+<fullyQualifiedTypeName name="com.ogtime.clinicplus.dao.IPatientDAO"/>
 </qualifiedTypeNameHistroy>

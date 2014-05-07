@@ -1,0 +1,25 @@
+package com.ogtime.clinicplus.controler;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.ogtime.clinicplus.metier.implement.PatientMetier;
+
+@Controller
+@RequestMapping(value="/patient")
+public class PatientController {
+	
+	@Autowired
+	private PatientMetier patientMetier;
+	
+	@RequestMapping(value="/add", method=RequestMethod.GET)
+	public ModelAndView ajouterPatient() {
+		ModelAndView modelAndView = new ModelAndView("index");
+		modelAndView.addObject("patient", new PatientMetier());
+		return modelAndView;
+	}
+
+}

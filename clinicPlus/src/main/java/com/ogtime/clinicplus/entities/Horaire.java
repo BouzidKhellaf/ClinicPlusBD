@@ -14,6 +14,7 @@ import javax.validation.constraints.NotNull;
 import org.hibernate.validator.constraints.NotEmpty;
 
 
+@SuppressWarnings("serial")
 @Entity
 public class Horaire implements Serializable{
 	
@@ -67,6 +68,4 @@ public class Horaire implements Serializable{
 		this.heure = heure;
 	}
 	
-	
-
 }

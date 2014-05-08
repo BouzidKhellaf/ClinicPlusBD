@@ -1,0 +1,21 @@
+package com.ogtime.clinicplus.controler;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.ogtime.clinicplus.metier.implement.ConsultationMetier;
+
+@RequestMapping(value="/consultation")
+public class ConsultationController {
+
+	@SuppressWarnings("unused")
+	private ConsultationMetier consultationMetier;
+	
+	@RequestMapping(value="/add", method=RequestMethod.GET)
+	public ModelAndView ajouterConsultation() {
+		ModelAndView modelAndView = new ModelAndView("index");
+		modelAndView.addObject("consultation", new ConsultationMetier());
+		return modelAndView;
+	}
+	
+}

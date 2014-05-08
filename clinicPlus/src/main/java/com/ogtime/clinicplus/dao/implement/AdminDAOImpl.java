@@ -5,13 +5,9 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
-
-import org.springframework.stereotype.Repository;
-
 import com.ogtime.clinicplus.dao.IAdminDAO;
 import com.ogtime.clinicplus.entities.Admin;
 
-@Repository
 public class AdminDAOImpl implements IAdminDAO{
 	
 	@PersistenceContext
@@ -42,7 +38,7 @@ public class AdminDAOImpl implements IAdminDAO{
 	@SuppressWarnings("unchecked")
 	@Override
 	public List<Admin> getAdmin() {
-		Query req = em.createQuery("select a from Admins a");
+		Query req = em.createQuery("select a from Admin a");
 		return req.getResultList();
 	}
 

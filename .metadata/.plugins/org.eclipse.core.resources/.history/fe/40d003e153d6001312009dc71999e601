@@ -1,0 +1,114 @@
+package com.ogtime.clinicplus.controler;
+
+import java.util.Locale;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+/**
+ * Handles requests for the application home page.
+ */
+@Controller
+public class HomeController {
+	
+	@SuppressWarnings("unused")
+	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
+	
+	/**
+	 * Simply selects the home view to render by returning its name.
+	 */
+	@RequestMapping(value = "/", method = RequestMethod.GET)
+	public String home(Locale locale, Model model) {
+				
+		return "index";
+	}
+	
+	
+	//Login
+	@RequestMapping(value = "/redirectLogin", method = RequestMethod.GET)
+	public String redirectLogin() {
+	     
+	    return "redirect:adminLogin";
+	}
+	   
+	@RequestMapping(value = "/adminLogin", method = RequestMethod.GET)
+	public String adminLogin() {
+	     
+	    return "admin/pages/connection/login";
+	}
+	
+	
+	//Admin
+	@RequestMapping(value = "/redirectAdmin", method = RequestMethod.POST)
+	public String redirectAdmin() {
+	     
+	    return "redirect:admin";
+	}
+	   
+	@RequestMapping(value = "/admin", method = RequestMethod.GET)
+	public String admin() {
+	     
+	    return "admin/admin";
+	}
+	
+	
+	//Calendar
+	@RequestMapping(value = "/redirectCalendar", method = RequestMethod.GET)
+	public String redirectCalendar() {
+	     
+	    return "redirect:calendar";
+	}
+	   
+	@RequestMapping(value = "/calendar", method = RequestMethod.GET)
+	public String calendar() {
+	     
+	    return "admin/pages/calendar";
+	}
+	
+	//Admin Part
+	//Liste Patients
+	@RequestMapping(value = "/redirectPatientsListe", method = RequestMethod.GET)
+	public String redirectPatientsListe() {
+		     
+		return "redirect:patientsListe";
+	}
+		   
+	@RequestMapping(value = "/patientsListe", method = RequestMethod.GET)
+	public String patientsListe() {
+		     
+		return "admin/pages/patientsListe";
+	}
+	
+	//Admin Part
+	//Enregistrer Patients
+	@RequestMapping(value = "/redirectPatientsEnregistrer", method = RequestMethod.GET)
+	public String redirectPatientsEnregistrer() {
+			     
+		return "redirect:patientsEnregistrer";
+	}
+			   
+	@RequestMapping(value = "/patientsEnregistrer", method = RequestMethod.GET)
+	public String patientsEnregistrer() {
+			     
+		return "admin/pages/patientsEnregistrer";
+	}
+	
+	//Admin Part
+		//Dossier Patients
+		@RequestMapping(value = "/redirectPatientsDossier", method = RequestMethod.GET)
+		public String redirectPatientsDossier() {
+				     
+			return "redirect:patientsDossier";
+		}
+				   
+		@RequestMapping(value = "/patientsDossier", method = RequestMethod.GET)
+		public String patientsDossier() {
+				     
+			return "admin/pages/patientsDossier";
+		}
+	
+}

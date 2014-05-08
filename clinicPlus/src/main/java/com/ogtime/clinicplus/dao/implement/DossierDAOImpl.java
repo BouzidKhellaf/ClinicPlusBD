@@ -5,13 +5,9 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
-
-import org.springframework.stereotype.Repository;
-
 import com.ogtime.clinicplus.dao.IDossierDAO;
 import com.ogtime.clinicplus.entities.Dossier;
 
-@Repository
 public class DossierDAOImpl implements IDossierDAO{
 	
 	@PersistenceContext
@@ -41,7 +37,7 @@ public class DossierDAOImpl implements IDossierDAO{
 	@SuppressWarnings("unchecked")
 	@Override
 	public List<Dossier> getDossier() {
-		Query req = em.createQuery("select d from Dossiers d");
+		Query req = em.createQuery("select d from Dossier d");
 		return req.getResultList();
 	}
 

@@ -5,13 +5,9 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
-
-import org.springframework.stereotype.Repository;
-
 import com.ogtime.clinicplus.entities.*;
 import com.ogtime.clinicplus.dao.IMedecinDAO;
 
-@Repository
 public class MedecinDAOImpl implements IMedecinDAO{
 	
 	@PersistenceContext
@@ -41,7 +37,7 @@ public class MedecinDAOImpl implements IMedecinDAO{
 	@SuppressWarnings("unchecked")
 	@Override
 	public List<com.ogtime.clinicplus.entities.Medecin> getMedecin() {
-		Query req = em.createQuery("select m from Medecins m");
+		Query req = em.createQuery("select m from Medecin m");
 		return req.getResultList();
 	}
 	

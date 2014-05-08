@@ -5,13 +5,9 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
-
-import org.springframework.stereotype.Repository;
-
 import com.ogtime.clinicplus.dao.ILigneConsultationDAO;
 import com.ogtime.clinicplus.entities.LigneConsultation;
 
-@Repository
 public class LigneConsultationDAOImpl implements ILigneConsultationDAO{
 	
 	@PersistenceContext
@@ -41,7 +37,7 @@ public class LigneConsultationDAOImpl implements ILigneConsultationDAO{
 	@SuppressWarnings("unchecked")
 	@Override
 	public List<LigneConsultation> getLigneConsultation() {
-		Query req = em.createQuery("select lc from LConsultations lc");
+		Query req = em.createQuery("select lc from LConsultation lc");
 		return req.getResultList();
 	}
 

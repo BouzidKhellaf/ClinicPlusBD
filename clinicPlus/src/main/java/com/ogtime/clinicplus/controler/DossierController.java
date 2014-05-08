@@ -1,6 +1,4 @@
 package com.ogtime.clinicplus.controler;
-
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -11,8 +9,8 @@ import com.ogtime.clinicplus.metier.implement.DossierMetier;
 @Controller
 @RequestMapping(value="/dossier")
 public class DossierController {
-	
-	@Autowired
+
+	@SuppressWarnings("unused")
 	private DossierMetier dossierMetier;
 	
 	@RequestMapping(value="/add", method=RequestMethod.GET)

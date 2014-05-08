@@ -69,4 +69,85 @@ public class HomeController {
 	    return "admin/pages/calendar";
 	}
 	
+	//Admin Part
+	//Liste Patients
+	@RequestMapping(value = "/redirectPatientsListe", method = RequestMethod.GET)
+	public String redirectPatientsListe() {
+		     
+		return "redirect:patientsListe";
+	}
+		   
+	@RequestMapping(value = "/patientsListe", method = RequestMethod.GET)
+	public String patientsListe() {
+		     
+		return "admin/pages/patientsListe";
+	}
+	
+
+	//Enregistrer Patients
+	@RequestMapping(value = "/redirectPatientsEnregistrer", method = RequestMethod.GET)
+	public String redirectPatientsEnregistrer() {
+			     
+		return "redirect:patientsEnregistrer";
+	}
+			   
+	@RequestMapping(value = "/patientsEnregistrer", method = RequestMethod.GET)
+	public String patientsEnregistrer() {
+			     
+		return "admin/pages/patientsEnregistrer";
+	}
+	
+
+	//Dossier Patients
+	@RequestMapping(value = "/redirectPatientsDossier", method = RequestMethod.GET)
+	public String redirectPatientsDossier() {
+				     
+		return "redirect:patientsDossier";
+	}
+				   
+	@RequestMapping(value = "/patientsDossier", method = RequestMethod.GET)
+	public String patientsDossier() {
+				     
+		return "admin/pages/patientsDossier";
+	}
+	
+	//Rendez-vous Liste
+	@RequestMapping(value = "/redirectRendezVousListe", method = RequestMethod.GET)
+	public String redirectRendezVousListe() {
+					     
+		return "redirect:rendezVousListe";
+	}
+					   
+	@RequestMapping(value = "/rendezVousListe", method = RequestMethod.GET)
+	public String rendezVousListe() {
+					     
+		return "admin/pages/rendezVousListe";
+	}
+	
+	//Rendez-vous Ceduler
+	@RequestMapping(value = "/redirectRendezVousCeduler", method = RequestMethod.GET)
+	public String redirectRendezVousCeduler() {
+						     
+		return "redirect:rendezVousCeduler";
+	}
+						   
+	@RequestMapping(value = "/rendezVousCeduler", method = RequestMethod.GET)
+	public String rendezVousCeduler() {
+						     
+		return "admin/pages/rendezVousCeduler";
+	}
+	
+	//Rendez-vous Ceduler
+		@RequestMapping(value = "/redirectRendezVousConsultation", method = RequestMethod.GET)
+		public String redirectRendezVousConsultation() {
+							     
+			return "redirect:rendezVousConsultation";
+		}
+							   
+		@RequestMapping(value = "/rendezVousConsultation", method = RequestMethod.GET)
+		public String rendezVousConsultation() {
+							     
+			return "admin/pages/rendezVousConsultation";
+		}
+	
 }

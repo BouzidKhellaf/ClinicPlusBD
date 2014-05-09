@@ -133,6 +133,9 @@
                                 
                                 <li><a href="<%request.getContextPath();%>/clinicplus/redirectPatientsDossier">
                                 <i class="fa fa-angle-double-right"></i> Dossier</a></li>
+                                
+                                <li><a href="<%request.getContextPath();%>/clinicplus/redirectPatientsNotification">
+                                <i class="fa fa-angle-double-right"></i> Notification</a></li>
                             </ul>
                         </li>
                         <li class="treeview">

@@ -138,6 +138,9 @@
                                 
                                 <li><a href="<%request.getContextPath();%>/clinicplus/redirectPatientsDossier">
                                 <i class="fa fa-angle-double-right"></i> Dossier</a></li>
+                                
+                                <li><a href="<%request.getContextPath();%>/clinicplus/redirectPatientsNotification">
+                                <i class="fa fa-angle-double-right"></i> Notification</a></li>
                             </ul>
                         </li>
                         <li class="treeview">
@@ -178,13 +181,24 @@
                         <div class="col-md-6">
                             <div class="box box-primary">
                                 <div class="box-header">
-                                    <h3 class="box-title">Date picker</h3>
+                                    <h3 class="box-title">Rendez-Vous</h3>
                                 </div>
                                
-
+									<div class="input-group">
+									<label>Spécialiste</label>
+                                        <input type="text" class="form-control">
+                                        <span class="input-group-addon"><i class="fa fa-check"></i></span>
+                                    </div>
+                                    
+                                    <div class="input-group">
+                                    <label>Patient</label>
+                                        <input type="text" class="form-control">
+                                        <span class="input-group-addon"><i class="fa fa-check"></i></span>
+                                    </div>
+                                    
                                     <!-- Date and time range -->
                                     <div class="form-group">
-                                        <label>Date and time range:</label>
+                                        <label>Date et heure du rendez-vous:</label>
                                         <div class="input-group">
                                             <div class="input-group-addon">
                                                 <i class="fa fa-clock-o"></i>
@@ -195,7 +209,7 @@
                                     
                                     <!-- phone mask -->
                                     <div class="form-group">
-                                        <label>US phone mask:</label>
+                                        <label>Téléphone:</label>
                                         <div class="input-group">
                                             <div class="input-group-addon">
                                                 <i class="fa fa-phone"></i>

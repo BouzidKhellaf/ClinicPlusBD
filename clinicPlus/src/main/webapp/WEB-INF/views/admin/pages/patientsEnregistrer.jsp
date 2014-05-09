@@ -139,6 +139,9 @@
                                 
                                 <li><a href="<%request.getContextPath();%>/clinicplus/redirectPatientsDossier">
                                 <i class="fa fa-angle-double-right"></i> Dossier</a></li>
+                                
+                                <li><a href="<%request.getContextPath();%>/clinicplus/redirectPatientsNotification">
+                                <i class="fa fa-angle-double-right"></i> Notification</a></li>
                             </ul>
                         </li>
                         <li class="treeview">
@@ -174,8 +177,105 @@
                 <!-- Main content -->
                 <section class="content">
 
-                  <!-- Content -->  
-
+                  <section class="content">
+                    <div class="row">
+                        <!-- left column -->
+                        <div class="col-md-6">
+                            <!-- general form elements -->
+                            <div class="box box-primary">
+                                <div class="box-header">
+                                    <h3 class="box-title">Enregistrer Patient</h3>
+                                </div><!-- /.box-header -->
+                                <!-- form start -->
+                                
+                                
+                                <h3 class="box-title">Enregistrer.</h3>
+														<form action="<%request.getContextPath();%>resources/contact/contact.php" 
+														method="post" role="form" class="contactForm">
+							  								<div class="form-group">
+																<label for="name">Nom</label>
+																	<input type="text" name="name" class="form-control" id="name" 
+																	placeholder="Nom" data-rule="maxlen:4" 
+																	data-msg="S.V.P. Entrez au moin 4 caractères" />
+																<div class="validation"></div>
+							  								</div>
+                                                            <div class="form-group">
+																<label for="prenom">Prénom</label>
+																	<input type="text" class="form-control" name="prenom" id="prenom" 
+																	placeholder="Prénom" data-rule="maxlen:4" 
+																	data-msg="S.V.P. Entrez au moin 4 caractères" />
+																<div class="validation"></div>
+							  								</div>
+							  								<div class="form-group">
+																<label for="adresse">Adresse</label>
+																	<input type="text" class="form-control" name="adresse" id="adresse" 
+																	placeholder="Adresse" data-rule="maxlen:4" 
+																	data-msg="S.V.P. Entrez au moin 4 caractères" />
+																<div class="validation"></div>
+							  								</div>
+                                                            <div class="form-group">
+																<label for="ville">Ville</label>
+																	<input type="text" class="form-control" name="ville" id="ville" 
+																	placeholder="Ville" data-rule="maxlen:4" 
+																	data-msg="S.V.P. Entrez au moin 4 caractères" />
+																<div class="validation"></div>
+							  								</div>
+							  								<div class="form-group">
+																<label for="pays">Pays</label>
+																	<input type="text" class="form-control" name="pays" id="pays" 
+																	placeholder="Pays" data-rule="maxlen:4" 
+																	data-msg="S.V.P. Entrez au moin 4 caractères" />
+																<div class="validation"></div>
+							  								</div>
+							  								<div class="form-group">
+																<label for="province">Province</label>
+																	<input type="text" class="form-control" name="province" id="province" 
+																	placeholder="Province" data-rule="maxlen:4" 
+																	data-msg="S.V.P. Entrez au moin 4 caractères" />
+																<div class="validation"></div>
+							  								</div>
+                                                            <div class="form-group">
+																<label for="codePostal">Code Postal</label>
+																	<input type="text" class="form-control" name="codePostal" id="codePostal" 
+																	placeholder="Code Postal" data-rule="maxlen:4" 
+																	data-msg="S.V.P. Entrez au moin 6 caractères" />
+																<div class="validation"></div>
+							  								</div>
+							  								<div class="form-group">
+																<label for="telephone">Téléphone</label>
+																	<input type="text" class="form-control" name="telephone" id="telephone" 
+																	placeholder="Téléphone" data-rule="maxlen:4" 
+																	data-msg="S.V.P. Entrez au moin 6 caractères" />
+																<div class="validation"></div>
+							  								</div>
+							  								<div class="form-group">
+																<label for="email">Courriel</label>
+																	<input type="email" class="form-control" name="email" id="email" 
+																	placeholder="Courriel" data-rule="email" 
+																	data-msg="S.V.P. Entrez un courriel valide" />
+																<div class="validation"></div>
+							  								</div>
+							  								<div class="form-group">
+																<label for="password">Entrez un mot de passe</label>
+																	<input type="password" name="password" class="form-control" id="password" 
+																	placeholder="Entrez un mot de passe" data-rule="password" 
+																	data-msg="S.V.P. Entrez au moin 4 caractères" />
+																<div class="validation"></div>
+							  								</div>
+							  								<div class="form-group">
+																<label for="password">Entrez à nouveau votre mot de passe</label>
+																	<input type="password" name="password" class="form-control" id="password" 
+																	placeholder="Entrez à nouveau votre mot de passe" data-rule="password" 
+																	data-msg="S.V.P. Entrez au moin 4 caractères" />
+																<div class="validation"></div>
+							  								</div>
+							  								<button type="submit" class="btn btn-theme pull-left">S'enregistrer</button>
+														</form>
+                                </div><!-- /.box-body -->
+                            </div><!-- /.box -->
+                        </div><!--/.col (right) -->
+                    </div>   <!-- /.row -->
+               
                 </section><!-- /.content -->
             </aside><!-- /.right-side -->
         </div><!-- ./wrapper -->
@@ -183,7 +283,7 @@
 
 
 
-        <!-- jQuery 2.0.2 -->
+       <!-- jQuery 2.0.2 -->
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
         <!-- jQuery UI 1.10.3 -->
         <script src="<%request.getContextPath();%>resources/js/jquery-ui-1.10.3.min.js" type="text/javascript"></script>
@@ -212,7 +312,8 @@
         <script src="<%request.getContextPath();%>resources/js/AdminLTE/app.js" type="text/javascript"></script>
         
         <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-        <script src="<%request.getContextPath();%>resources/js/AdminLTE/dashboard.js" type="text/javascript"></script>        
+        <script src="<%request.getContextPath();%>resources/js/AdminLTE/dashboard.js" type="text/javascript"></script>  
+        
 
     </body>
 </html>

@@ -111,6 +111,19 @@ public class HomeController {
 		return "admin/pages/patientsDossier";
 	}
 	
+	//Notification Patients
+		@RequestMapping(value = "/redirectPatientsNotification", method = RequestMethod.GET)
+		public String redirectPatientsNotification() {
+					     
+			return "redirect:patientsNotification";
+		}
+					   
+		@RequestMapping(value = "/patientsNotification", method = RequestMethod.GET)
+		public String patientsNotification() {
+					     
+			return "admin/pages/patientsNotification";
+		}
+	
 	//Rendez-vous Liste
 	@RequestMapping(value = "/redirectRendezVousListe", method = RequestMethod.GET)
 	public String redirectRendezVousListe() {
